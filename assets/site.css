@@ -146,7 +146,7 @@ body.name-visible .site-name{opacity:1;transform:none;pointer-events:auto}
 .honors-list time,.service-period{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .honors-list h4,.volunteer-note h3,.academic-service h3,.service-subheading{font-size:16px;font-weight:500;line-height:1.65;color:var(--ink)}
 .honors-list p{font-size:13px;line-height:1.75;color:var(--muted);margin-top:4px}
-/* Keep each entry on one line; the table can scroll on narrow screens. */
+/* Desktop columns; mobile entries stack below at the page breakpoint. */
 .service-role-column{width:200px}
 .service-period-column{width:130px}
 html[lang^='zh'] .service-role-column{width:130px}
@@ -277,6 +277,20 @@ html[lang^='zh'] .profile-nav a{font-size:14px}
   .awards p{font-size:15.5px}
   .honors-list li{grid-template-columns:minmax(0,1fr) auto;gap:14px}
   .honors-list h4,.volunteer-note h3,.academic-service h3,.service-subheading{font-size:15px}
+  .service-table-wrap{overflow:visible}
+  .service-table,html[lang^='zh'] .service-table{display:block;min-width:0;max-width:100%}
+  .service-table colgroup{display:none}
+  .service-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .service-table tbody{display:block}
+  .service-table tbody tr{display:flex;flex-wrap:wrap;gap:3px 8px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line)}
+  .service-table tbody tr:last-child{border-bottom:0}
+  .service-table tbody th,.service-table tbody td{display:block;min-width:0;padding:0;border:0;white-space:normal;text-align:left;overflow-wrap:anywhere}
+  .service-table tbody th{flex:0 0 100%}
+  .service-table .service-role,.service-table .service-period,
+  html[lang^='zh'] .service-table .service-role,html[lang^='zh'] .service-table .service-period{width:auto}
+  .service-table .service-role{flex:0 1 auto;max-width:calc(100% - 142px)}
+  .service-table .service-period{flex:none;white-space:nowrap}
+  .service-table .service-period::before{content:"·";margin-right:8px}
   .entry-head,.edu-head{flex-wrap:wrap;gap:2px 14px}
   .entry-copy{font-size:16.5px}
   .photo-pair{gap:10px}
