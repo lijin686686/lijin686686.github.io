@@ -1,229 +1,302 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Jin Li, an undergraduate at Tsinghua University working on world models and embodied intelligence.">
-<title>Jin Li · 李锦</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23c2785b'/%3E%3Ctext x='20' y='28' text-anchor='middle' fill='white' font-family='Georgia' font-size='26'%3EJ%3C/text%3E%3C/svg%3E">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>/* set language before first paint: ?lang=zh|en */(function(){var l=new URLSearchParams(location.search).get('lang');if(l==='zh'){document.documentElement.lang='zh-CN';document.title='李锦 Jin Li · 清华大学自动化系'}})()</script>
+<title>Jin Li · 李锦 — Tsinghua University</title>
+<meta name="description" content="Jin Li (李锦), undergraduate in the Department of Automation, Tsinghua University, working on world models and embodied intelligence. Co-second author of AmbiguousWorld (NeurIPS 2026).">
+<link rel="canonical" href="https://lijin686686.github.io/">
+<link rel="alternate" hreflang="en" href="https://lijin686686.github.io/?lang=en">
+<link rel="alternate" hreflang="zh-CN" href="https://lijin686686.github.io/?lang=zh">
+<link rel="alternate" hreflang="x-default" href="https://lijin686686.github.io/">
+<meta name="theme-color" content="#faf9f5">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23a55035'/%3E%3Ctext x='20' y='28.5' text-anchor='middle' fill='white' font-family='Georgia,serif' font-style='italic' font-size='25'%3EJL%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / sharing card -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Jin Li · 李锦">
+<meta property="og:title" content="Jin Li · 李锦">
+<meta property="og:description" content="Undergraduate at Tsinghua University · World models & embodied intelligence · AmbiguousWorld (NeurIPS 2026)">
+<meta property="og:url" content="https://lijin686686.github.io/">
+<meta property="og:image" content="https://lijin686686.github.io/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jin Li · 李锦 — Tsinghua University, world models and embodied intelligence">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="profile:first_name" content="Jin">
+<meta property="profile:last_name" content="Li">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jin Li · 李锦">
+<meta name="twitter:description" content="Undergraduate at Tsinghua University · World models & embodied intelligence">
+<meta name="twitter:image" content="https://lijin686686.github.io/assets/og-card.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jin Li",
+  "alternateName": "李锦",
+  "url": "https://lijin686686.github.io/",
+  "image": "https://lijin686686.github.io/assets/portrait.webp",
+  "email": ["mailto:lj24@mails.tsinghua.edu.cn", "mailto:lijin686686@gmail.com"],
+  "jobTitle": "Undergraduate student",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Tsinghua University",
+    "department": {"@type": "Organization", "name": "Department of Automation"}
+  },
+  "knowsAbout": ["World models", "Embodied intelligence", "Video generation", "Robotics"],
+  "sameAs": ["https://github.com/lijin686686"]
+}
+</script>
+
 <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-/* OFL fonts are hosted locally. */
-@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400 600;font-display:swap;src:url('assets/fonts/source-serif-4-latin.woff2') format('woff2')}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('assets/fonts/dm-sans-latin.woff2') format('woff2')}
-:root{color-scheme:light;--bg:#faf9f5;--sidebar:#f0eee6;--ink:#30302e;--text:#3d3c38;--muted:#6f6e66;--accent:#a55035;--line:#dedbd2;--hover:#e8e5dc;--serif:'Source Serif 4',Georgia,'Songti SC',STSong,serif;--sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}
-html[data-theme='blue']{--bg:#f6f8fc;--sidebar:#e9eef6;--ink:#2c3c53;--text:#3d4858;--muted:#636e7c;--accent:#45628a;--line:#dce2ec;--hover:#dce5f0}
-html[data-theme='green']{--bg:#f7f9f5;--sidebar:#e8eee7;--ink:#293b32;--text:#3f4c44;--muted:#647268;--accent:#446850;--line:#d9e0d6;--hover:#dce5da}
-html[data-theme='rose']{--bg:#fcf8f7;--sidebar:#f3e9e7;--ink:#463133;--text:#574548;--muted:#7a6668;--accent:#91525c;--line:#e7d9d8;--hover:#ebdad8}
-html[data-theme='sand']{--bg:#fbf9f2;--sidebar:#f1ebdc;--ink:#463d2d;--text:#514937;--muted:#7a705b;--accent:#896528;--line:#e5dcc6;--hover:#e8dec7}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:36px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 var(--sans);font-optical-sizing:auto;font-kerning:normal;font-synthesis:none;-webkit-font-smoothing:antialiased}
-h1,h2,h3,p,figure{margin:0}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}::selection{background:var(--hover);color:var(--ink)}
-.skip{position:absolute;top:-80px;left:20px;background:var(--bg);padding:10px;z-index:20}.skip:focus{top:10px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
-/* A narrow, quiet index leaves room for the person and their work. */
-.shell{width:100%;max-width:1136px;margin:0 auto;padding:88px 48px 0;display:grid;grid-template-columns:156px minmax(0,1fr);column-gap:64px;align-items:start}
-.profile{position:sticky;top:54px;min-width:0;font-family:var(--sans)}.site-name{display:inline-flex;gap:10px;align-items:baseline;font:400 27px/1.3 var(--serif);letter-spacing:-.025em;color:var(--ink)}.site-name span{font:13px/1.5 'Songti SC',STSong,serif;letter-spacing:.04em;color:var(--muted)}.site-note{font-size:11px;line-height:1.8;margin-top:7px;color:var(--muted)}
-.profile-nav{margin-top:42px;display:flex;flex-direction:column;gap:13px}.profile-nav a{position:relative;color:var(--muted);font-size:13px;line-height:1.7;padding:3px 0;transition:color .15s}.profile-nav a:hover,.profile-nav a[aria-current]{color:var(--ink)}.profile-nav a[aria-current]::before{content:'';position:absolute;left:-14px;top:12px;width:4px;height:4px;background:var(--accent);border-radius:50%}
-.language{display:flex;gap:8px;align-items:center;margin-top:34px;color:var(--line);font-size:12px}.language button{border:0;background:none;color:var(--muted);padding:5px 0;min-height:32px;font-size:12px}.language button[aria-pressed='true']{color:var(--ink);font-weight:500}
-main{min-width:0}.section{border-top:1px solid var(--line);padding:40px 0 46px}.section:first-child{padding-top:0;border:0}.section-heading{font:400 30px/1.3 var(--serif);letter-spacing:-.025em;color:var(--ink);margin-bottom:26px}
-.hero-kicker{font-size:12px;line-height:1.7;color:var(--muted)}.hero-name{font:400 58px/1.12 var(--serif);letter-spacing:-.04em;color:var(--ink);margin-top:14px}.hero-name span{font:400 23px/1.4 'Songti SC',STSong,serif;letter-spacing:.04em;color:var(--muted);display:inline-block;vertical-align:baseline;margin-left:12px}.hero-role{font-size:13px;line-height:1.8;color:var(--accent);margin-top:12px}
-.about-copy{font:18px/1.75 var(--serif);margin-top:26px;max-width:64ch}.about-copy p+p{margin-top:13px}.hero-email{display:inline-flex;align-items:center;gap:13px;font-size:12px;color:var(--muted);margin-top:21px}.hero-email:hover{color:var(--accent)}.hero-email span{font-size:15px;color:var(--accent)}
-.news-row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:15px;font-size:13px;line-height:1.8}.news-row+.news-row{margin-top:12px}.news-row time{padding-top:4px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.news-row a{color:var(--accent);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
-/* Research imagery is compact and explicitly labelled by its source. */
-.paper+.paper{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}.paper-featured{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px}.paper-content{min-width:0}.paper-meta{font-size:11px;line-height:1.75;color:var(--muted);margin-bottom:9px;display:flex;flex-wrap:wrap;gap:3px 10px}.paper-meta .venue{color:var(--accent);font-weight:500}.paper h3{font:400 22px/1.38 var(--serif);letter-spacing:-.015em;color:var(--ink);text-wrap:pretty}.authors{margin-top:11px;font-size:12px;line-height:1.7;display:flex;gap:11px;flex-wrap:wrap}.authors strong{font-weight:500}.authors .role{color:var(--muted)}.paper-summary{font:16px/1.7 var(--serif);color:var(--muted);margin-top:9px}.research-image{padding-top:3px}.research-image img{width:100%;aspect-ratio:16/9;object-fit:contain}.research-image figcaption{font-size:10px;line-height:1.65}
-.project-row{display:grid;grid-template-columns:77px minmax(0,1fr);gap:20px}.project-row+.project-row{margin-top:25px}.project-key{font-size:12px;line-height:1.8;color:var(--muted);padding-top:3px}.project-row h3,.entry h3{font-size:15px;font-weight:500;line-height:1.65;color:var(--ink)}.project-row p{font:17px/1.7 var(--serif);color:var(--muted);margin-top:6px}
-.entry+.entry{margin-top:34px}.entry-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}.entry time{font-size:11px;line-height:1.8;white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}.entry-role{font-size:12px;line-height:1.8;color:var(--accent);margin-top:5px}.entry-copy{font:17px/1.75 var(--serif);margin-top:13px}
-.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:23px}.photo-pair figure{min-width:0}.photo-button{border:0;display:block;width:100%;padding:0;background:transparent;cursor:zoom-in;border-radius:3px;overflow:hidden}.photo-button img{display:block;width:100%;height:auto;border-radius:3px;transition:opacity .18s}.photo-button:hover img{opacity:.9}.photo-pair img{aspect-ratio:1.5;object-fit:cover}.photo-pair figcaption,.research-image figcaption{font-family:var(--sans);color:var(--muted);margin-top:8px}.photo-pair figcaption{font-size:11px;line-height:1.6}.personal-gallery{grid-template-columns:1fr 1fr}.personal-gallery img{aspect-ratio:1.5}.personal-gallery figure:first-child img{object-position:50% 45%}
-.edu-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}.edu-head h3{font-size:16px;font-weight:500;line-height:1.8;color:var(--ink)}.edu-head time{font-size:11px;line-height:1.8;white-space:nowrap;color:var(--muted)}.degree{font-size:13px;line-height:1.8;color:var(--muted);margin-top:4px}.academic{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:13px;line-height:1.8;margin-top:17px}.academic strong{font-weight:500;color:var(--ink)}.academic>span:first-child{font-size:11px;color:var(--muted);align-self:center}.service{font:17px/1.75 var(--serif);margin-top:25px}.service strong{font-weight:500;color:var(--ink)}.service p+p{margin-top:12px}.personal-life{margin-top:35px}.personal-life h3{font:400 25px/1.4 var(--serif);letter-spacing:-.015em;color:var(--ink)}.personal-copy{font:17px/1.75 var(--serif);margin-top:10px;color:var(--muted)}
-.awards{list-style:none;padding:0;margin:0}.awards li{display:grid;grid-template-columns:minmax(0,1fr) 122px;gap:22px;padding:13px 0;font-size:14px;line-height:1.75}.awards li+li{border-top:1px solid var(--line)}.award-result{font-size:12px;line-height:1.9;color:var(--muted);text-align:right;padding-top:1px}.award-year{font-size:11px;color:var(--muted);margin-left:9px;white-space:nowrap}
-.footer{grid-column:2;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:22px 0 34px;font-size:11px;color:var(--muted)}.footer a:hover{color:var(--accent)}
-/* The five palettes remain available without occupying a full header. */
-.palette-picker{position:fixed;right:24px;top:17px;z-index:10;font-family:var(--sans)}.palette-picker summary{list-style:none;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:5px 11px;font-size:11px;line-height:1.7;color:var(--muted)}.palette-picker summary::-webkit-details-marker{display:none}.current-swatch{width:9px;height:9px;border-radius:50%;background:var(--accent)}.palette-options{position:absolute;right:0;top:40px;width:360px;max-width:calc(100vw - 32px);display:grid;grid-template-columns:repeat(5,1fr);gap:3px;padding:8px;background:var(--bg);border:1px solid var(--line);border-radius:9px;box-shadow:0 6px 24px rgb(0 0 0 / .05)}.palette-button{display:flex;align-items:center;justify-content:center;gap:5px;background:transparent;border:1px solid transparent;border-radius:5px;min-height:36px;padding:5px;color:var(--muted);font-size:11px;line-height:1.5;white-space:nowrap}.palette-button:hover{background:var(--sidebar)}.palette-button[aria-pressed='true']{background:var(--sidebar);border-color:var(--line);color:var(--ink)}.swatch{width:11px;height:11px;border-radius:50%;background:var(--swatch);flex:none}
-.photo-dialog{padding:24px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);max-width:min(1100px,calc(100vw - 36px));max-height:calc(100svh - 36px);overflow:auto}.photo-dialog::backdrop{background:rgb(25 25 23 / .66)}.photo-dialog img{display:block;max-width:100%;max-height:calc(100svh - 130px);width:auto;height:auto;margin:12px auto 0;border-radius:3px}.photo-dialog figcaption{font-size:12px;color:var(--muted);margin-top:13px;padding-right:20px}.photo-close{position:absolute;right:8px;top:5px;border:0;background:var(--bg);border-radius:50%;font:25px/1 var(--sans);width:32px;height:32px;color:var(--muted)}
-html[lang='zh-CN'] .about-copy,html[lang='zh-CN'] .news-item,html[lang='zh-CN'] .paper-summary,html[lang='zh-CN'] .project-row p,html[lang='zh-CN'] .entry-copy,html[lang='zh-CN'] .service,html[lang='zh-CN'] .personal-copy{font-family:'PingFang SC','Microsoft YaHei',var(--sans);font-size:15px;line-height:1.95}html[lang='zh-CN'] .about-copy{font-size:16px}html[lang='zh-CN'] .section-heading,html[lang='zh-CN'] .personal-life h3{font-family:'Songti SC',STSong,'Noto Serif CJK SC',var(--serif);letter-spacing:.025em}
-@media(max-width:1050px){.shell{padding:72px 32px 0;grid-template-columns:136px minmax(0,1fr);column-gap:40px}.site-name{font-size:25px}.site-name span{font-size:12px}.paper-featured{grid-template-columns:145px minmax(0,1fr);gap:20px}.paper h3{font-size:21px}.hero-name{font-size:54px}.section-heading{font-size:29px}.awards li{grid-template-columns:minmax(0,1fr) 103px}}
-@media(max-width:720px){html{scroll-padding-top:25px}.shell{display:block;padding:28px 24px 0}.profile{position:relative;top:0;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:28px}.site-name{font-size:25px}.site-note{display:none}.profile-nav{margin-top:18px;flex-direction:row;gap:8px 17px;flex-wrap:wrap;padding-right:0}.profile-nav a{font-size:12px;line-height:1.7;padding:2px 0}.profile-nav a[aria-current]::before{display:none}.profile-nav a[aria-current]{color:var(--accent)}.language{position:absolute;right:0;top:0;margin:0;gap:6px}.language button{font-size:11px}.palette-picker{top:auto;bottom:18px;right:18px}.palette-picker summary{min-height:36px;padding:7px 12px;background:var(--bg);box-shadow:0 2px 10px rgb(0 0 0 / .035)}.palette-options{top:auto;bottom:45px;width:340px}.hero-kicker{font-size:11px}.hero-name{font-size:48px;margin-top:12px}.hero-name span{font-size:21px;margin-left:9px}.hero-role{font-size:12px;margin-top:10px;max-width:33ch}.about-copy{font-size:18px;line-height:1.7;margin-top:21px}.hero-email{font-size:12px;margin-top:18px}.news-row{grid-template-columns:52px minmax(0,1fr);gap:12px}.section{padding:30px 0 35px}.section-heading{font-size:28px;margin-bottom:22px}.paper-featured{grid-template-columns:1fr;gap:15px}.research-image{width:min(225px,75%);padding:0}.research-image figcaption{font-size:10px}.paper h3{font-size:22px}.paper-summary{font-size:17px}.paper-meta{font-size:11px}.project-row{grid-template-columns:1fr;gap:3px}.project-row+.project-row{margin-top:24px}.project-row p,.entry-copy,.service,.personal-copy{font-size:17px}.entry-head,.edu-head{flex-wrap:wrap;gap:5px 14px}.entry h3{font-size:15px}.photo-pair{gap:10px;margin-top:20px}.photo-pair figcaption{font-size:10px;line-height:1.65}.personal-gallery{grid-template-columns:1fr 1fr}.personal-gallery img{aspect-ratio:1.4}.academic{gap:5px 18px}.academic>span:first-child{width:100%}.awards li{grid-template-columns:minmax(0,1fr) 88px;gap:14px;font-size:13px}.award-result{font-size:11px}.footer{padding:20px 0 76px;font-size:11px}.footer a{white-space:nowrap}.photo-dialog{padding:18px 14px}.photo-dialog figcaption{font-size:11px}html[lang='zh-CN'] .section-heading{font-size:26px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.profile-nav a,.photo-button img{transition:none}}
-
-/* Preserve the complete paper method figure at a readable width. */
-.paper-featured.method-paper{display:block}
-.method-paper .research-image{width:100%;margin-top:21px;padding:0}
-.method-image .photo-button{padding:9px;background:#fff;border:1px solid var(--line);border-radius:5px}
-.method-image img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:0}
-.method-image figcaption{font-size:11px;margin-top:9px}
-@media(max-width:720px){.method-image .photo-button{padding:5px}.method-paper .research-image{margin-top:18px}.method-image figcaption{font-size:10px}}
-
-/* A small, shared line-icon vocabulary follows the selected palette. */
-.icon{display:inline-block;width:16px;height:16px;flex:0 0 auto;vertical-align:middle;pointer-events:none}
-.profile-nav a{display:flex;align-items:center;gap:10px}
-.profile-nav a>.icon{width:15px;height:15px;color:var(--muted);transition:color .15s}
-.profile-nav a:hover>.icon,.profile-nav a[aria-current]>.icon{color:var(--accent)}
-.profile-nav a[aria-current]::before{display:none}
-.hero-email{gap:8px}.hero-email>.icon{color:var(--accent)}
-.paper-meta{align-items:center}.paper-meta .venue{display:inline-flex;align-items:center;gap:5px}
-.paper-meta .icon{width:13px;height:13px}.manuscript-meta{gap:6px}
-.photo-button{position:relative}.photo-zoom{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--muted);transition:color .15s,border-color .15s}
-.photo-zoom .icon{width:14px;height:14px}.photo-button:hover .photo-zoom,.photo-button:focus-visible .photo-zoom{color:var(--accent);border-color:var(--accent)}
-.method-image .photo-zoom{position:static;margin:5px 0 0 auto;width:23px;height:23px;background:transparent;border-color:transparent;border-radius:3px}
-.photo-close{display:flex;align-items:center;justify-content:center}.photo-close .icon{width:18px;height:18px}.photo-close:hover{color:var(--accent)}
-.footer a{display:inline-flex;align-items:center;gap:6px}.footer .icon{width:13px;height:13px}
-@media(max-width:720px){.profile-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 12px}.profile-nav a{gap:7px;white-space:nowrap}.profile-nav a>.icon{width:14px;height:14px}.photo-zoom{right:7px;bottom:7px;width:25px;height:25px}.method-image .photo-zoom{margin-top:4px}}
-@media(prefers-reduced-motion:reduce){.profile-nav a>.icon,.photo-zoom{transition:none}}
-
-/* Small icons mark the main reading sections and supporting information. */
-.section-heading{display:flex;align-items:flex-start;gap:10px}
-.section-heading>.icon{width:18px;height:18px;margin-top:.3em;color:var(--accent)}
-.section-heading>span{min-width:0}
-.personal-life h3,.hero-kicker{display:flex;align-items:center;gap:8px}
-.hero-kicker>.icon{width:13px;height:13px;color:var(--accent)}
-.personal-life h3>.icon{width:17px;height:17px;color:var(--accent)}
-@media(max-width:720px){.section-heading{gap:9px}.section-heading>.icon{width:17px;height:17px}.hero-kicker{align-items:flex-start;gap:7px}.hero-kicker>.icon{margin-top:3px}}
-
-/* Flat, theme-colored illustrations accompany each news item. */
-.news-item{display:flex;align-items:flex-start;gap:7px;font:17px/1.75 var(--serif)}
-.news-item>.news-symbol{display:block;width:16px;height:16px;flex:0 0 16px;margin-top:calc((1lh - 16px)/2);color:var(--accent);pointer-events:none}
-.news-item>span{min-width:0}
-
-/* Looser 3:4 framing of the retouched photo; equivalent source crop
-   (1410, 720, 1710, 2280) on the original 4032 x 3024 photograph. */
-#about{display:flow-root}
-.hero-portrait{float:right;position:relative;width:clamp(160px,30%,208px);aspect-ratio:3/4;margin:0 0 22px 28px;overflow:hidden;border-radius:6px;background:var(--sidebar)}
-.hero-portrait img{position:absolute;display:block;width:235.789474%;max-width:none;height:auto;left:-82.456140%;top:-31.578947%}
-@media(min-width:721px) and (max-width:900px){.hero-portrait{width:160px;margin-left:24px}}
-@media(max-width:540px){.hero-portrait{float:none;width:150px;margin:0 0 24px}}
-
-/* A subtle accent ties the accepted venue together in News and Publications. */
-.venue-highlight{color:var(--accent);font-weight:600;white-space:nowrap;padding:0 .08em;background:linear-gradient(transparent 66%,color-mix(in srgb,var(--accent) 15%,transparent) 66%)}
-.paper-meta .venue{font-size:13px;font-weight:600;gap:6px}
-
-/* The opening name uses a true display italic; the sidebar keeps its original type. */
-@font-face{font-family:'Jin Li Display';font-style:italic;font-weight:400;font-display:swap;src:url('data:font/ttf;base64,AAEAAAARAQAABAAQQkFTRVT/bggAAAIMAAAARkdERUYAEgAGAAABPAAAABZHUE9TBkzujAAAA9wAAADWR1NVQuDrwm4AAANkAAAAdk9TLzJfvpouAAADBAAAAGBTVEFUWRdCGQAAAqgAAABaY21hcADRAVwAAAJUAAAAVGdhc3AAAAAQAAABJAAAAAhnbHlmN+sphgAABLQAAAJkaGVhZCBemAEAAAHUAAAANmhoZWEMRQlQAAABsAAAACRobXR4CsoAoQAAAVQAAAAcbG9jYQHlAo4AAAEsAAAAEG1heHAAHwFkAAABcAAAACBuYW1lZj6LXwAABxgAAAMScG9zdP/FADIAAAGQAAAAIHByZXBoBoyFAAABHAAAAAe4Af+FsASNAAABAAH//wAPAAAAJAAkAGQAlwDUASoBMgABAAAADAAAAAAAAAACAAEAAgAFAAEAAAKAAGYAzAAAATT/jgIAAAIBHAA5AhEAOQEcADkAAQAAAAcAyQAKAJcACgABAAAAAAAAAAAAAAAAAAMAAwADAAD/9AAA/84AMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAQM/rEAAAhP/zD+nAgwA+gA1f/FAAAAAAAAAAAAAAAHAAEAAAAEAQb3j1pYXw889QADA+gAAAAA3DC94QAAAADdsZWl/zD+vwgwA9MAAgAGAAIAAAAAAAAAAQAAAAgAAAA0AAQABERGTFQAGmN5cmwAGmdyZWsAGmxhdG4AGgAGAAAAAAABAAIADAAIAAEAAAAB/1sAAmlkZW9yb21uAAAAAAACAAAAAwAAABQAAwABAAAAFAAEAEAAAAAMAAgAAgAEACAASgBMAGkAbv//AAAAIABKAEwAaQBu////4f+4/7f/m/+XAAEAAAAAAAAAAAAAAAAAAQABAAgAAwAAABQAAwAAACwAAm9wc3oBYwAAd2dodAFzAAFpdGFsAVUAAgAiABIABgABAAIAAAFVAAEAAAADAAEAAgF2AZAAAAK8AAAAAQAAAAABcgA8AAAAAAAEAfEBkAAFAAACigJY//AASwKKAlgASgFeADIBHQAAAgQFAwQEBQICBCAAAocCAAADAAAAAAAAAABBREJPAIEAIABuBAz+sQAAA/EBRCAAAZ8AAAAAAdsCngAAACAAAwABAAAACgBQAF4ABERGTFQAPGN5cmwAOGdyZWsAOGxhdG4AGgAAAANBWkUgABZDUlQgABZUUksgABYAAP//AAEAAAAAAAAABAAAAAD//wAAAAFsb2NsAAgAAAABAAAAAQAEAAEAAAABAAgAAQAGAAIAAQABAAQAAAABAAAACgAwAD4ABERGTFQAGmN5cmwAGmdyZWsAGmxhdG4AGgAEAAAAAP//AAEAAAABa2VybgAIAAAAAQAAAAEABAAJAAgAAgA2AAoAAQACAAAACAACABoABAAAACAAZAABAAUAAAAA//j/9v/2AAEAAQACAAIAAAABAAIAAAAIAAIALgAEAAAASAA4AAMABQAAAAAAAP/7AAAAAAAAAAAAAAAAAAD//AAAAAAAAAACAAEAAwAGAAAAAQACAAUABAABAAMAAgADAAEAAwAEAAIAAQAAAAEAAAAEAGYAAAJGAp4AAwAHAAsADwAAMwEzASEjATMRIREhAxEhEWYBoz3+XQGjPf5dPQFm/po9AeACnv1iAp79lQI5/ZQCnv1iAAAC/47/bwFxAp4AIwApAAAHNjYzMhYWFxUjNT4CNz4DNzY2NzMDDgMHDgIjIiYTNzMHByNyBSAXDBYfGBkaJBkHAwYKDwsRJhBGXQ8YGSAYEiMnGR4q7QPxA2oVYxEXCRgYBQULLD4jDCM6WkFdvF3+PUtnRTAVEBULFgMJEBAMAAQAAgAAAdYCngAEAA4AFAAbAAAzNzczByMTNjY3MwMGBgcDNzMHByMDNyEHNzMHAgNoGgUxRA4aDEdEDhoMJAPoA2UabwQBJyhVECYQDBwBaU2bTf6WTZpNAo4QEAz9fhgMsLwAAAIAOf/0AQsCpwAaACYAADc0NjcTFyc3NxcDBgYVFBYzMjY3Fw4CIyImEyImNTQ2MzIWFRQGRgMFQQ5kApQJSQMFCwcOMhoMDygxHxIgixIYIxYUFyMgCRoaATQJEA4qCP6jEBkICQokHgoZMiAWAjMXExslGBQbIwAAAgA5//QB7wHQAA0AOQAAFycTFyc3NxcPAgYGBxciJjU0Njc3NjY1NCYjIgYGByczPgIzMhYVFAYHBwYGFRQWMzI2NxcOAkUIUw1kApQJGAEcChAI5xIgAwYqBQwVDhQxPSYCBiBGRh8dHwkFLQQECwcPMhkMDycxCAgBkQkQDioIbwaLMWQzDBYWCRoauRc2ERQTFCkfEyE6IyMhFi4XxhAZCAkKJB4KGTIg//8AOf/0AQsCpwIGAAQAAAAAAA0AogADAAEECQAAAMYBqgADAAEECQABACYBhAADAAEECQACAAwBeAADAAEECQADAEQBNAADAAEECQAEADQBAAADAAEECQAFAGQAnAADAAEECQAGAC4AbgADAAEECQAOADQAOgADAAEECQFVAAwBeAADAAEECQFjABgAIgADAAEECQFyAAgAGgADAAEECQFzAAwADgADAAEECQF2AA4AAABSAGUAZwB1AGwAYQByAFcAZQBpAGcAaAB0ADYAMABwAHQATwBwAHQAaQBjAGEAbAAgAHMAaQB6AGUAaAB0AHQAcAA6AC8ALwBzAGMAcgBpAHAAdABzAC4AcwBpAGwALgBvAHIAZwAvAE8ARgBMAFMAbwB1AHIAYwBlAFMAZQByAGkAZgA0ADYAMABwAHQALQBJAHQAYQBsAGkAYwBWAGUAcgBzAGkAbwBuACAANAAuADAAMAA0ADsAaABvAHQAYwBvAG4AdgAgADEALgAwAC4AMQAxADYAOwBtAGEAawBlAG8AdABmAGUAeABlACAAMgAuADUALgA2ADUANgAwADEAUwBvAHUAcgBjAGUAIABTAGUAcgBpAGYAIAA0ACAANgAwAHAAdAAgAEkAdABhAGwAaQBjADQALgAwADAANAA7AEEARABCAE8AOwBTAG8AdQByAGMAZQBTAGUAcgBpAGYANAA2ADAAcAB0AC0ASQB0AGEAbABpAGMASQB0AGEAbABpAGMAUwBvAHUAcgBjAGUAIABTAGUAcgBpAGYAIAA0ACAANgAwAHAAdACpACAAMgAwADEANAAgAC0AIAAyADAAMgAxACAAQQBkAG8AYgBlACAAUwB5AHMAdABlAG0AcwAgAEkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAAKABoAHQAdABwADoALwAvAHcAdwB3AC4AYQBkAG8AYgBlAC4AYwBvAG0ALwApACwAIAB3AGkAdABoACAAUgBlAHMAZQByAHYAZQBkACAARgBvAG4AdAAgAE4AYQBtAGUAICAYAFMAbwB1AHIAYwBlIBkALgAA') format('truetype')}
-.hero-name{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 20px;margin-top:15px;line-height:1.1}
-.hero-name .hero-name-en{font:italic 400 74px/1.1 'Jin Li Display',Georgia,serif;letter-spacing:-.045em;color:var(--ink);margin:0;white-space:nowrap}
-.hero-name .hero-name-zh{font:400 28px/1.3 'Kaiti SC','STKaiti','KaiTi','Songti SC',serif;letter-spacing:.12em;color:var(--muted);margin:0;white-space:nowrap}
-@media(min-width:721px) and (max-width:1050px){.hero-name{gap:0 15px}.hero-name .hero-name-en{font-size:64px}.hero-name .hero-name-zh{font-size:25px}}
-@media(max-width:720px){.hero-name{gap:0 15px;margin-top:13px}.hero-name .hero-name-en{font-size:60px}.hero-name .hero-name-zh{font-size:25px}}
-
-</style>
+<link rel="stylesheet" href="assets/site.css?v=20260928-photos-awards">
+<script src="assets/site.js?v=20260928-cumulative-grades" defer></script>
 </head>
 <body>
-<a class="skip" href="#about">Skip to content</a>
-<details class="palette-picker"><summary aria-label="选择配色"><span class="current-swatch" aria-hidden="true"></span>配色</summary>
-<div class="palette-options" role="group" aria-label="选择配色">
-<button class="palette-button" type="button" data-theme-option="clay" aria-pressed="true" aria-label="暖纸陶土配色"><span class="swatch" style="--swatch:#c2785b" aria-hidden="true"></span>暖纸</button>
-<button class="palette-button" type="button" data-theme-option="blue" aria-pressed="false" aria-label="雾蓝配色"><span class="swatch" style="--swatch:#7189ab" aria-hidden="true"></span>雾蓝</button>
-<button class="palette-button" type="button" data-theme-option="green" aria-pressed="false" aria-label="松绿配色"><span class="swatch" style="--swatch:#748e74" aria-hidden="true"></span>松绿</button>
-<button class="palette-button" type="button" data-theme-option="rose" aria-pressed="false" aria-label="玫瑰灰配色"><span class="swatch" style="--swatch:#b17e83" aria-hidden="true"></span>玫瑰</button>
-<button class="palette-button" type="button" data-theme-option="sand" aria-pressed="false" aria-label="沙金配色"><span class="swatch" style="--swatch:#b59a60" aria-hidden="true"></span>沙金</button>
-</div></details>
+<!-- Icon sprite: one line vocabulary (24×24, 1.6 stroke, round caps) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></symbol>
+  <symbol id="i-news" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6v14M12 6C9.5 4 5.5 4 3 5.2v13.3c2.5-1.2 6.5-1.2 9 1.5 2.5-2.7 6.5-2.7 9-1.5V5.2C18.5 4 14.5 4 12 6Z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.6 13.4-1.1 7.6 4.5-2.4 4.5 2.4-1.1-7.6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5.2a3 3 0 0 1 0 5.6M18 13a5 5 0 0 1 3 4.6V20"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2.5 9 9.5-4.5L21.5 9 12 13.5 2.5 9Z"/><path d="M6.5 11v4.8c3.5 2.6 7.5 2.6 11 0V11M21.5 9v5.5"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 9 12 4l9 5H3ZM6 12v6m4-6v6m4-6v6m4-6v6M3 21h18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9s-1.2 6.5-3.6 9c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3Z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8.5 8-4 4 4 4m7-8 4 4-4 4M13.5 5l-3 14"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5 13.8 10l6.7 2-6.7 2L12 20.5 10.2 14l-6.7-2 6.7-2L12 3.5Z"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+</svg>
+
+<a class="skip" href="#main"><span data-l="en">Skip to content</span><span data-l="zh">跳到正文</span></a>
+
 <div class="shell">
-<aside class="profile" aria-label="Jin Li profile">
-  <div class="profile-core"><a class="site-name" href="#about">Jin Li<span lang="zh-CN">李锦</span></a><p class="site-note" data-t="siteNote">Personal website</p></div>
-  <nav class="profile-nav" aria-label="Page navigation"><a href="#about" aria-current="location"><svg class="icon icon-person" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3"/><path d="M5 20v-2a7 7 0 0 1 14 0v2"/></svg><span data-t="navAbout">About</span></a><a href="#news"><svg class="icon icon-clock" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-t="navNews">News</span></a><a href="#research"><svg class="icon icon-book" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v15M12 5C9 3 5 3 2.5 4.5v14C5 17 9 17 12 20c3-3 7-3 9.5-1.5v-14C19 3 15 3 12 5Z"/></svg><span data-t="navResearch">Research</span></a><a href="#projects"><svg class="icon icon-code" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m9 9-3 3 3 3m6-6 3 3-3 3"/></svg><span data-t="navProjects">Projects</span></a><a href="#experience"><svg class="icon icon-compass" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></svg><span data-t="navExperience">Experience</span></a><a href="#education"><svg class="icon icon-graduation" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6m4-2v8"/></svg><span data-t="navEducation">Education</span></a><a href="#awards"><svg class="icon icon-award" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2.5 4.5 2.5-1-9"/></svg><span data-t="navAwards">Awards</span></a></nav>
-  <div class="language" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false">中文</button></div>
+<aside class="profile" aria-label="Jin Li">
+  <a class="site-name" href="#about" tabindex="-1" aria-hidden="true">Jin Li<span lang="zh-CN">李锦</span></a>
+  <nav class="profile-nav" aria-label="Sections" data-aria-zh="页面导航">
+    <a href="#about"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-person"/></svg><span data-l="en">About</span><span data-l="zh">关于</span></a>
+    <a href="#news"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-news"/></svg><span data-l="en">News</span><span data-l="zh">动态</span></a>
+    <a href="#education"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg><span data-l="en">Education</span><span data-l="zh">教育</span></a>
+    <a href="#research"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span data-l="en">Publications</span><span data-l="zh">论文</span></a>
+    <a href="#honors"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg><span data-l="en">Honors</span><span data-l="zh">荣誉</span></a>
+    <a href="#service"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-people"/></svg><span data-l="en">Service</span><span data-l="zh">服务</span></a>
+    <a href="#experience"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"/></svg><span data-l="en">Experience</span><span data-l="zh">实践</span></a>
+  </nav>
+  <div class="language" role="group" aria-label="Language / 语言">
+    <button type="button" data-language="en" aria-pressed="true" lang="en">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false" lang="zh-CN">中文</button>
+  </div>
 </aside>
+
 <main id="main">
-<section class="section" id="about" aria-labelledby="about-title">
-<figure class="hero-portrait"><img src="assets/jin-li-portrait-retouched.jpg" width="1448" height="1086" alt="Jin Li in front of a painting" fetchpriority="high" decoding="async"></figure>
-<p class="hero-kicker"><svg class="icon icon-university" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 8 9-5 9 5H3Zm1 13h16M6 11v7m6-7v7m6-7v7M3 18h18"/></svg><span data-t="heroKicker">Tsinghua University · Department of Automation</span></p>
-<h1 class="hero-name" id="about-title"><span class="hero-name-en">Jin Li</span> <span class="hero-name-zh" lang="zh-CN">李锦</span></h1>
-<p class="hero-role" data-t="heroRole">Undergraduate · World models & embodied intelligence</p>
-<div class="about-copy"><p data-t="bio1">I am Jin Li, an undergraduate in the Department of Automation at Tsinghua University. My research interests lie in world models and embodied intelligence. I work on understanding and resolving ambiguous instructions in video world models, as well as identifiable phase spaces in Hamiltonian world models.</p><p data-t="bio2">Alongside research, I develop algorithms and robot task modules through AI and robotics competitions. In summer 2026, I served as the fieldwork group leader of Tsinghua’s MUSE delegation to the United States, exploring how AI is changing creative work, arts education and human–AI collaboration through interviews in New York and Los Angeles.</p></div>
-<a class="hero-email" href="mailto:lj24@mails.tsinghua.edu.cn"><svg class="icon icon-mail" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>lj24@mails.tsinghua.edu.cn</a>
+<section class="section hero" id="about" aria-labelledby="about-title">
+  <figure class="hero-portrait"><img src="assets/portrait.webp" width="480" height="640" alt="Portrait of Jin Li" data-alt-zh="李锦的照片" fetchpriority="high" decoding="async"></figure>
+  <div class="hero-text">
+    <p class="hero-kicker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"/></svg><span data-l="en">Tsinghua University · Department of Automation</span><span data-l="zh">清华大学 · 自动化系</span></p>
+    <h1 class="hero-name" id="about-title"><span class="hero-name-en" lang="en">Jin Li</span> <span class="hero-name-zh" lang="zh-CN">李锦</span></h1>
+    <p class="hero-role"><span data-l="en">Undergraduate · World models &amp; embodied intelligence</span><span data-l="zh">本科生 · 世界模型与具身智能</span></p>
+    <div class="about-copy">
+      <div data-l="en">
+        <p>I am an undergraduate in the Department of Automation at Tsinghua University. I am interested in world models and embodied intelligence — in particular, how video world models can understand under-specified human instructions and still generate physically consistent, task-relevant futures.</p>
+        <p>In <a href="#ambiguousworld">AmbiguousWorld</a> (NeurIPS 2026), we built a benchmark of ambiguous instructions on the DROID robot-manipulation dataset and an inference-time tree search in which a vision–language model plans subgoals and critiques candidate videos. I also develop algorithms and robot task modules through Tsinghua’s AI and embodied-intelligence <a href="#competitions">competitions</a>.</p>
+      </div>
+      <div data-l="zh">
+        <p>我是清华大学自动化系本科生，研究兴趣是世界模型与具身智能，目前主要关注：当人类指令省略关键细节时，视频世界模型如何理解意图，并生成符合物理规律、贴合任务的后续过程。</p>
+        <p>在 <a href="#ambiguousworld">AmbiguousWorld</a>（NeurIPS 2026）中，我们基于 DROID 机器人操作数据集构建了歧义指令基准，并提出推理时的树搜索框架：由视觉语言模型拆分子目标、评判候选视频。此外，我也通过清华大学的人工智能与具身智能<a href="#competitions">竞赛</a>参与算法开发和机器人任务模块实现。</p>
+      </div>
+    </div>
+    <div class="contact">
+      <a href="mailto:lj24@mails.tsinghua.edu.cn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>lj24@mails.tsinghua.edu.cn</a>
+      <a href="mailto:lijin686686@gmail.com"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>lijin686686@gmail.com</a>
+      <a href="https://github.com/lijin686686" rel="me"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub</a>
+    </div>
+  </div>
 </section>
-<section class="section news-section" id="news" aria-labelledby="news-title">
-<h2 class="section-heading" id="news-title"><svg class="icon icon-clock" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-t="newsTitle">News</span></h2>
-<div class="news-row"><time datetime="2026-09">2026.09</time><p class="news-item"><svg class="news-symbol" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 10-5 11 11-5Z" fill="currentColor" fill-opacity=".22"/><path d="m8 10-5 11 11-5Zm-2.1 4.6 3.5 3.5M13 9c-2-4 5-2 3-6M15 12c3-4 3 2 6-2"/><path d="m10 3 .8-1 .8 1-.8 1Z" fill="currentColor" stroke="none"/><circle cx="20" cy="5" r="1.2" fill="currentColor" fill-opacity=".65" stroke="none"/><path d="m18 17 1 1"/></svg><span data-t="news1"><a href="#ambiguousworld">AmbiguousWorld</a> accepted to <strong class="venue-highlight">NeurIPS 2026</strong> Main Track as a Poster.</span></p></div><div class="news-row"><time datetime="2026-08">2026.08</time><p class="news-item"><svg class="news-symbol" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".12"/><path d="m6 5 4 1 1 3-3 2-2-1-2 1M13 4l-1 3 3 2 4-1M10 13l4-1 3 3-2 2-1 4-3-2v-3l-2-1Z" fill="currentColor" fill-opacity=".48" stroke="none"/><circle cx="12" cy="12" r="9"/></svg><span data-t="news2">Led the fieldwork group of <a href="#muse">MUSE</a> in New York and Los Angeles, studying AI and creative work.</span></p></div>
+
+<section class="section" id="news" aria-labelledby="news-title">
+  <h2 class="section-heading" id="news-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-news"/></svg><span data-l="en">News</span><span data-l="zh">近期动态</span></h2>
+  <div class="news-row">
+    <time datetime="2026-09">2026.09</time><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>
+    <p class="news-item"><span data-l="en"><a href="#ambiguousworld">AmbiguousWorld</a> was accepted to <strong class="venue-highlight">NeurIPS 2026</strong> (Main Track, Poster).</span><span data-l="zh"><a href="#ambiguousworld">AmbiguousWorld</a> 被 <strong class="venue-highlight">NeurIPS 2026</strong> 主会录用（Poster）。</span></p>
+  </div>
+  <div class="news-row">
+    <time datetime="2026-09">2026.09</time><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book"/></svg>
+    <p class="news-item"><span data-l="en">Served as a reviewer for <a href="#service">NeurIPS 2026 Workshop RTCA</a>.</span><span data-l="zh">担任 <a href="#service">NeurIPS 2026 Workshop RTCA</a> 审稿人。</span></p>
+  </div>
+  <div class="news-row">
+    <time datetime="2026-09">2026.09</time><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-people"/></svg>
+    <p class="news-item"><span data-l="en">Helped prepare the <a href="#service">3rd Tsinghua Embodied Intelligence Challenge (THUEI-3)</a>.</span><span data-l="zh">参与筹备<a href="#service">清华大学第三届具身智能挑战赛（THUEI-3）</a>。</span></p>
+  </div>
+  <div class="news-row">
+    <time datetime="2026-08">2026.08</time><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>
+    <p class="news-item"><span data-l="en">Led the fieldwork group of Tsinghua’s <a href="#muse">MUSE</a> delegation in New York and Los Angeles, studying how AI is changing creative work.</span><span data-l="zh">担任清华大学 <a href="#muse">MUSE</a> 赴美实践支队实践组组长，在纽约、洛杉矶围绕 AI 与内容创作开展调研。</span></p>
+  </div>
 </section>
+
+<section class="section" id="education" aria-labelledby="education-title">
+  <h2 class="section-heading" id="education-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg><span data-l="en">Education</span><span data-l="zh">教育经历</span></h2>
+  <div class="edu-head"><h3><span data-l="en">Tsinghua University</span><span data-l="zh">清华大学</span></h3><time datetime="2024"><span data-l="en">2024 – present</span><span data-l="zh">2024 至今</span></time></div>
+  <p class="degree"><span data-l="en">Undergraduate · Department of Automation</span><span data-l="zh">本科 · 自动化系</span></p>
+  <p class="academic"><span class="label"><span data-l="en">2025–26 academic year</span><span data-l="zh">2025–26 学年</span></span><span>GPA <strong>4.00 / 4.00</strong></span><span><span data-l="en">Rank</span><span data-l="zh">年级排名</span> <strong>1 / 170</strong></span></p>
+  <p class="academic"><span class="label"><span data-l="en">Cumulative · through Spring 2026</span><span data-l="zh">入学以来 · 截至 2026 春</span></span><span>GPA <strong>3.9 / 4.0</strong></span><span><span data-l="en">Rank</span><span data-l="zh">年级排名</span> <strong>19 / 170</strong></span></p>
+</section>
+
 <section class="section" id="research" aria-labelledby="research-title">
-<h2 class="section-heading" id="research-title"><svg class="icon icon-book" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v15M12 5C9 3 5 3 2.5 4.5v14C5 17 9 17 12 20c3-3 7-3 9.5-1.5v-14C19 3 15 3 12 5Z"/></svg><span data-t="researchTitle">Publications & research</span></h2>
-<article class="paper paper-featured method-paper" id="ambiguousworld">
-<div class="paper-content"><p class="paper-meta"><span class="venue"><svg class="icon icon-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg><strong class="venue-highlight">NeurIPS 2026</strong></span><span data-t="accepted">Main Track · Poster · Accepted</span></p><h3>AmbiguousWorld: Benchmarking and Resolving Ambiguous Instructions in Video World Models</h3><div class="authors"><strong>Jin Li</strong><span class="role" data-t="coSecond">Co-second author</span></div><p class="paper-summary" data-t="awSummary">How can video world models follow human instructions that leave important details unstated? AmbiguousWorld combines a benchmark built on DROID with an inference-time reasoning framework. A vision–language model decomposes instructions into subgoals, explores candidate video trajectories through tree search, and uses visual feedback to prune paths that conflict with the task or physical constraints.</p></div>
-<figure class="research-image method-image"><button class="photo-button" type="button" aria-label="View AmbiguousWorld method overview"><img src="assets/ambiguousworld-method.png" width="1437" height="806" alt="AmbiguousWorld method overview: dynamic decomposition, branch generation, tree search, video generation and VLM critic" loading="lazy"><span class="photo-zoom" aria-hidden="true"><svg class="icon icon-zoom" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span></button><figcaption data-t="researchCaption">Figure 2 · Method overview</figcaption></figure>
-</article>
-<article class="paper"><p class="paper-meta manuscript-meta"><svg class="icon icon-file" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Zm0 0v6h6M8 13h8m-8 4h5"/></svg><span data-t="manuscript">Research manuscript</span></p><h3>I-HWM: Identifiable Phase Space for Hamiltonian World Models</h3><div class="authors"><strong>Jin Li</strong><span class="role" data-t="second">Second author</span></div><p class="paper-summary" data-t="ihwmSummary">Research on identifiable phase space in Hamiltonian world models.</p></article>
+  <h2 class="section-heading" id="research-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book"/></svg><span data-l="en">Publications</span><span data-l="zh">论文</span></h2>
+  <article class="paper" id="ambiguousworld">
+    <p class="paper-meta"><span class="venue"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg><strong class="venue-highlight">NeurIPS 2026</strong></span><span data-l="en">Main Track · Poster</span><span data-l="zh">主会 · Poster</span></p>
+    <h3 lang="en"><span class="paper-name">AmbiguousWorld<span class="sr-only">: </span></span><span class="paper-title-detail">Benchmarking and Resolving Ambiguous Instructions in Video World Models</span></h3>
+    <p class="authors" lang="en"><span class="author">Bo Wang</span>, <span class="author">Sen Cui</span>, <span class="author"><strong>Jin Li</strong><sup>†</sup></span>, <span class="author">Mingxi Huang<sup>†</sup></span>, <span class="author">Zhikang Chen</span>, <span class="author">Min Zhang</span>, <span class="author">Guocai Yao</span>, <span class="author">Changshui Zhang</span></p>
+    <div class="paper-links">
+      <a href="https://ambiguousworld-anon.github.io/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg><span data-l="en">Project page</span><span data-l="zh">项目主页</span></a>
+      <a href="https://github.com/ambiguousworld-anon/ambiguousworld-code"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg><span data-l="en">Code</span><span data-l="zh">代码</span></a>
+    </div>
+    <div class="paper-summary" data-l="en"><p>AmbiguousWorld addresses instructions that leave key details unstated. At inference time, a vision–language model decomposes instructions into subgoals, explores candidate video branches through tree search, and prunes those that violate task or physical constraints.</p><p>We build an ambiguous-instruction benchmark on DROID and evaluate the framework with Cosmos, Wan and CogVideoX, improving weighted generation quality across all three video backbones.</p></div>
+    <div class="paper-summary" data-l="zh"><p>针对省略关键细节的指令，AmbiguousWorld 在推理阶段引入多模态树搜索：由视觉语言模型拆分子目标、评估候选视频，并筛除偏离任务或违背物理约束的分支。</p><p>我们基于 DROID 构建歧义指令基准，在 Cosmos、Wan 和 CogVideoX 三个视频模型上评估该框架，均改善了加权生成质量。</p></div>
+    <figure class="method-image">
+      <button class="photo-button" type="button" aria-label="Enlarge method overview" data-aria-zh="放大方法总览图"><img src="assets/ambiguousworld-method.webp" width="1437" height="806" alt="AmbiguousWorld method overview: dynamic decomposition, branch generation, tree search, video generation and VLM critic" data-alt-zh="AmbiguousWorld 方法总览：动态子目标拆分、分支生成、树搜索、视频生成与视觉语言模型评判" loading="lazy" decoding="async"><span class="photo-zoom" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zoom"/></svg></span></button>
+      <figcaption><span data-l="en">Method overview (Figure 2 of the paper)</span><span data-l="zh">方法总览（论文图 2）</span></figcaption>
+    </figure>
+  </article>
 </section>
-<section class="section" id="projects" aria-labelledby="projects-title"><h2 class="section-heading" id="projects-title"><svg class="icon icon-code" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m9 9-3 3 3 3m6-6 3 3-3 3"/></svg><span data-t="projectsTitle">Selected projects</span></h2>
-<article class="project-row"><div class="project-key">THUEI-2</div><div><h3 data-t="thueiTitle">Embodied Intelligence Challenge</h3><p data-t="thueiBody">As a team member, I contributed to preliminary-round tasks and robot modules for line-following, grasping and transport in the final round. Our team received First Prize.</p></div></article>
-<article class="project-row"><div class="project-key">THUAI-9</div><div><h3 data-t="thuaiTitle">Tsinghua AI Challenge</h3><p data-t="thuaiBody">As team captain, I worked on core algorithm implementation and iteration, refined competition strategies and coordinated the team’s work. We received First Prize.</p></div></article>
-<article class="project-row"><div class="project-key">SparkEdu</div><div><h3 data-t="sparkTitle">Embodied AI training camp</h3><p data-t="sparkBody">Took part in the Tsinghua program of Alibaba DAMO Academy’s embodied intelligence training camp, contributing to data collection, model fine-tuning and deployment. Our group received the Outstanding Team award.</p></div></article>
+
+<section class="section" id="honors" aria-labelledby="honors-title">
+  <h2 class="section-heading" id="honors-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg><span data-l="en">Honors &amp; awards</span><span data-l="zh">荣誉</span></h2>
+  <h3 class="honors-subheading"><span data-l="en">Honors &amp; scholarships</span><span data-l="zh">个人荣誉与奖学金</span></h3>
+  <ul class="honors-list">
+    <li>
+      <div><h4><span data-l="en">Outstanding Student Award</span><span data-l="zh">清华大学三好学生</span></h4>
+      <p><span data-l="en">Tsinghua University · 2025–2026 academic year</span><span data-l="zh">2025–2026 学年度 · 清华大学</span></p></div>
+      <time datetime="2026-07">2026.07</time>
+    </li>
+    <li>
+      <div><h4><span data-l="en">Outstanding Communist Youth League Member</span><span data-l="zh">清华大学优秀共青团员</span></h4>
+      <p><span data-l="en">Tsinghua University · 2025–2026</span><span data-l="zh">2025–2026 年度 · 共青团清华大学委员会</span></p></div>
+      <time datetime="2026-07">2026.07</time>
+    </li>
+    <li>
+      <div><h4><span data-l="en">Tsinghua Alumni – Fang Chongzhi Scholarship</span><span data-l="zh">清华校友-方崇智奖学金</span></h4></div>
+      <time datetime="2025-11">2025.11</time>
+    </li>
+    <li>
+      <div><h4><span data-l="en">Huaying Scholarship</span><span data-l="zh">华英奖学金</span></h4></div>
+      <time datetime="2025-11">2025.11</time>
+    </li>
+  </ul>
+
+  <div class="honors-subsection" id="competitions" aria-labelledby="competitions-title">
+    <h3 class="honors-subheading" id="competitions-title"><span data-l="en">Competitions</span><span data-l="zh">科技竞赛</span></h3>
+    <ul class="awards">
+      <li>
+        <div><h4><span data-l="en">9th Tsinghua AI Challenge (THUAI-9)</span><span data-l="zh">清华大学第九届人工智能挑战赛（THUAI-9）</span></h4>
+        <p data-l="en">Team captain — implemented and iterated the core algorithm, refined strategy and coordinated the team.</p><p data-l="zh">队长：负责核心算法实现与迭代、策略优化，并协调团队分工。</p></div>
+        <span class="result"><span data-l="en">First Prize</span><span data-l="zh">一等奖</span></span>
+        <time class="year" datetime="2026-06">2026.06</time>
+      </li>
+      <li>
+        <div><h4><span data-l="en">2nd Tsinghua Embodied Intelligence Challenge (THUEI-2)</span><span data-l="zh">清华大学第二届具身智能挑战赛（THUEI-2）</span></h4>
+        <p data-l="en">Team member — preliminary-round tasks, and final-round robot modules for line-following, grasping and transport.</p><p data-l="zh">队员：参与初赛任务开发，以及决赛循迹、抓取与运输等机器人任务模块实现。</p></div>
+        <span class="result"><span data-l="en">First Prize</span><span data-l="zh">一等奖</span></span>
+        <time class="year" datetime="2025-11">2025.11</time>
+      </li>
+      <li>
+        <div><h4><span data-l="en">SparkEdu embodied-AI training camp · Tsinghua session</span><span data-l="zh">乐云具身 · SparkEdu 具身智能训练营清华大学站</span></h4>
+        <p data-l="en">Hosted with Alibaba DAMO Academy — data collection, model fine-tuning and on-robot deployment.</p><p data-l="zh">阿里巴巴达摩院具身智能训练营：参与数据采集、模型微调与部署。</p></div>
+        <span class="result"><span data-l="en">Outstanding Team</span><span data-l="zh">优秀团队</span></span>
+        <time class="year" datetime="2025-12">2025.12</time>
+      </li>
+      <li>
+        <div><h4><span data-l="en">8th Tsinghua AI Challenge (THUAI-8) · Automation track</span><span data-l="zh">清华大学第八届人工智能挑战赛（THUAI-8）· 自动化系赛道</span></h4>
+        <p data-l="en">Team captain.</p><p data-l="zh">队长。</p></div>
+        <span class="result"><span data-l="en">Grand Prize</span><span data-l="zh">特等奖</span><small><span data-l="en">1st place</span><span data-l="zh">第一名</span></small></span>
+        <time class="year" datetime="2025-05">2025.05</time>
+      </li>
+      <li>
+        <div><h4><span data-l="en">4th Tsinghua Robotic Dog Development Competition</span><span data-l="zh">第四届机器狗开发大赛</span></h4>
+        <p data-l="en">Team member — gained hands-on experience with robot hardware.</p><p data-l="zh">队员：通过竞赛积累机器人硬件实践经验。</p></div>
+        <span class="result"><span data-l="en">Second Prize</span><span data-l="zh">二等奖</span><small><span data-l="en">4th place</span><span data-l="zh">第四名</span></small></span>
+        <time class="year" datetime="2025-05">2025.05</time>
+      </li>
+    </ul>
+  </div>
 </section>
-<section class="section" id="experience" aria-labelledby="experience-title"><h2 class="section-heading" id="experience-title"><svg class="icon icon-compass" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></svg><span data-t="experienceTitle">Experience</span></h2>
-<article class="entry" id="muse"><div class="entry-head"><h3 data-t="museTitle">MUSE · United States field study</h3><time datetime="2026-08">2026.08</time></div><p class="entry-role" data-t="museRole">Fieldwork group leader · New York & Los Angeles</p><p class="entry-copy" data-t="museBody">Organized visits and activities in New York and Los Angeles, conducted interviews and contributed to the delegation’s field report. Through exchanges with institutions including NYU, CFR and NCUSCR, we examined AI’s role in creative work and arts education, and the challenges that remain in storytelling, aesthetic judgment and collaboration. These observations informed our report on changing barriers to creative work in China and the United States.</p><div class="photo-pair muse-gallery">
-<figure><button class="photo-button" type="button" aria-label="View MUSE delegation photograph"><img src="assets/muse-delegation.jpg" alt="MUSE delegation group photograph with the 2026 United States field study flag" width="1269" height="847" loading="lazy"><span class="photo-zoom" aria-hidden="true"><svg class="icon icon-zoom" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span></button><figcaption data-t="museCaption">MUSE delegation · August 2026</figcaption></figure>
-<figure><button class="photo-button" type="button" aria-label="View NYU exchange photograph"><img src="assets/muse-nyu.jpg" alt="Panel discussion during the MUSE delegation's exchange at New York University" width="1270" height="846" loading="lazy"><span class="photo-zoom" aria-hidden="true"><svg class="icon icon-zoom" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span></button><figcaption data-t="nyuCaption">An exchange at New York University</figcaption></figure>
-</div></article>
-<article class="entry"><div class="entry-head"><h3 data-t="suzhouTitle">Wan Wu Fu Su · Social field study</h3><time datetime="2025-07">2025.07</time></div><p class="entry-role" data-t="suzhouRole">Delegation leader</p><p class="entry-copy" data-t="suzhouBody">Led the delegation, arranging contacts with local government and companies, coordinating field visits and research routes, and helping plan the team’s follow-up articles. The delegation received the Department of Automation’s Second Prize for summer social practice, with further recognition for outreach, liaison work and its published coverage.</p></article>
+
+<section class="section" id="service" aria-labelledby="service-title">
+  <h2 class="section-heading" id="service-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-people"/></svg><span data-l="en">Service &amp; leadership</span><span data-l="zh">服务与任职</span></h2>
+  <div class="academic-service">
+    <h3><span data-l="en">Academic service</span><span data-l="zh">学术服务</span></h3>
+    <div class="service-table-wrap" tabindex="0" role="region" aria-label="Academic service, scroll horizontally on small screens" data-aria-zh="学术服务，小屏幕可横向滚动">
+      <table class="service-table">
+        <colgroup><col><col class="service-role-column"><col class="service-period-column"></colgroup>
+        <thead><tr><th scope="col"><span data-l="en">Organization</span><span data-l="zh">组织</span></th><th scope="col"><span data-l="en">Role</span><span data-l="zh">职务</span></th><th scope="col"><span data-l="en">Year / period</span><span data-l="zh">时间</span></th></tr></thead>
+        <tbody>
+          <tr><th scope="row" lang="en">NeurIPS 2026 Workshop RTCA</th><td class="service-role"><span data-l="en">Reviewer</span><span data-l="zh">审稿人</span></td><td class="service-period"><time datetime="2026-09">2026.09</time></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h3 class="service-subheading"><span data-l="en">Student leadership</span><span data-l="zh">学生工作</span></h3>
+  <div class="service-table-wrap" tabindex="0" role="region" aria-label="Student roles, scroll horizontally on small screens" data-aria-zh="学生任职，小屏幕可横向滚动">
+    <table class="service-table">
+      <colgroup><col><col class="service-role-column"><col class="service-period-column"></colgroup>
+      <thead class="sr-only"><tr><th scope="col"><span data-l="en">Organization</span><span data-l="zh">组织</span></th><th scope="col"><span data-l="en">Role</span><span data-l="zh">职务</span></th><th scope="col"><span data-l="en">Period</span><span data-l="zh">时间</span></th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><span data-l="en">Automation S&amp;T Association · Hardware Division</span><span data-l="zh">自动化系科协硬件部</span></th><td class="service-role"><span data-l="en">Head</span><span data-l="zh">部长</span></td><td class="service-period"><time datetime="2026-06">2026.06</time>–<span data-l="en">Present</span><span data-l="zh">至今</span></td></tr>
+        <tr><th scope="row"><span data-l="en">Automation S&amp;T Association · Hardware Division</span><span data-l="zh">自动化系科协硬件部</span></th><td class="service-role"><span data-l="en">Member</span><span data-l="zh">干事</span></td><td class="service-period"><time datetime="2025-06">2025.06</time>–<time datetime="2026-06">2026.06</time></td></tr>
+        <tr><th scope="row"><span data-l="en">Class Zi43</span><span data-l="zh">自43班</span></th><td class="service-role"><span data-l="en">Youth League branch secretary</span><span data-l="zh">团支书</span></td><td class="service-period"><time datetime="2025-06">2025.06</time>–<time datetime="2026-06">2026.06</time></td></tr>
+        <tr><th scope="row"><span data-l="en">TMS · Department of Automation</span><span data-l="zh">自动化系 TMS</span></th><td class="service-role"><span data-l="en">Member</span><span data-l="zh">干事</span></td><td class="service-period"><time datetime="2025-06">2025.06</time>–<time datetime="2026-06">2026.06</time></td></tr>
+        <tr><th scope="row"><span data-l="en">Campus Consultation Forum</span><span data-l="zh">校园议事厅</span></th><td class="service-role"><span data-l="en">Student representative</span><span data-l="zh">代表</span></td><td class="service-period"><time datetime="2026-01">2026.01</time>–<span data-l="en">Present</span><span data-l="zh">至今</span></td></tr>
+        <tr><th scope="row"><span data-l="en">Course Advisory Committee</span><span data-l="zh">课程咨询委员会</span></th><td class="service-role"><span data-l="en">Student member</span><span data-l="zh">干事</span></td><td class="service-period"><time datetime="2026-03">2026.03</time>–<time datetime="2026-06">2026.06</time></td></tr>
+        <tr><th scope="row"><span data-l="en">Class Zi43 · Party Study Group</span><span data-l="zh">自43党课小组</span></th><td class="service-role"><span data-l="en">Group leader</span><span data-l="zh">组长</span></td><td class="service-period"><time datetime="2024-09">2024.09</time>–<time datetime="2025-06">2025.06</time></td></tr>
+        <tr><th scope="row"><span data-l="en">Brain &amp; Cognitive Science Enrichment Program</span><span data-l="zh">“脑与认知科学”因材施教计划</span></th><td class="service-role"><span data-l="en">Deputy class representative</span><span data-l="zh">副班长</span></td><td class="service-period"><time datetime="2025-02">2025.02</time>–<time datetime="2025-06">2025.06</time></td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
-<section class="section" id="education" aria-labelledby="education-title"><h2 class="section-heading" id="education-title"><svg class="icon icon-graduation" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6m4-2v8"/></svg><span data-t="educationTitle">Education & campus</span></h2><div class="edu-head"><h3 data-t="university">Tsinghua University</h3><time data-t="educationTime">2024–present</time></div><p class="degree" data-t="degree">Department of Automation · Undergraduate</p><div class="academic"><span data-t="academicYear">This academic year</span><span>GPA <strong>4.00/4.00</strong></span><span><span data-t="rank">Rank</span> <strong>1/170</strong></span></div><div class="service"><p data-t="service"><strong>Campus service.</strong> Contributed to technical training and competition organization through the hardware division of the department’s science and technology association. As a campus discussion representative, took part in discussions on dormitory renovation and relocation.</p><p data-t="volunteering"><strong>Volunteering.</strong> Supported the robotic dog and embodied intelligence competitions, new-student summer training, letter-writing programs and a youth waste-sorting activity in the Shangdi Bayi community.</p></div>
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <h2 class="section-heading" id="experience-title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"/></svg><span data-l="en">Field studies</span><span data-l="zh">社会实践</span></h2>
+  <article class="entry" id="muse">
+    <div class="entry-head"><h3><span data-l="en">MUSE · Tsinghua delegation to the United States</span><span data-l="zh">MUSE · 清华大学赴美实践支队</span></h3><time datetime="2026-08">2026.08</time></div>
+    <p class="entry-role"><span data-l="en">Fieldwork group leader · New York &amp; Los Angeles</span><span data-l="zh">实践组组长 · 纽约与洛杉矶</span></p>
+    <p class="entry-copy" data-l="en">Organized visits and interviews and contributed to the delegation’s field report. Through exchanges with NYU, the Council on Foreign Relations and the National Committee on U.S.–China Relations, we looked at how generative AI is changing creative work and arts education — and what still depends on storytelling, aesthetic judgment and collaboration.</p>
+    <p class="entry-copy" data-l="zh">组织纽约、洛杉矶两地行程与访谈，参与支队调研报告撰写。支队走访纽约大学、美国外交关系协会、美中关系全国委员会等机构，围绕 AI 与内容创作、艺术教育开展交流，探讨生成工具普及后，故事表达、审美判断与团队协作仍面临的挑战，成果整理为报告《提示词之外，缪斯何在？——AI 时代创作门槛的中美观察》。</p>
+    <div class="photo-pair">
+      <figure><button class="photo-button" type="button" aria-label="Enlarge NCUSCR group photograph" data-aria-zh="放大美中关系全国委员会交流合影"><img src="assets/muse-delegation.webp" width="1269" height="847" alt="MUSE delegation group photograph at the National Committee on U.S.–China Relations (NCUSCR)" data-alt-zh="MUSE 支队在美中关系全国委员会（NCUSCR）的交流合影" loading="lazy" decoding="async"><span class="photo-zoom" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zoom"/></svg></span></button><figcaption><span data-l="en">Group photograph at NCUSCR</span><span data-l="zh">美中关系全国委员会（NCUSCR）交流合影</span></figcaption></figure>
+      <figure><button class="photo-button" type="button" aria-label="Enlarge NYU group photograph" data-aria-zh="放大纽约大学交流合影"><img src="assets/muse-nyu.webp?v=20260928-group" width="1920" height="1280" alt="MUSE delegation group photograph at New York University" data-alt-zh="MUSE 支队在纽约大学的合影" loading="lazy" decoding="async"><span class="photo-zoom" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zoom"/></svg></span></button><figcaption><span data-l="en">Group photograph at New York University</span><span data-l="zh">纽约大学交流合影</span></figcaption></figure>
+    </div>
+  </article>
+  <article class="entry" id="wanwufusu">
+    <div class="entry-head"><h3><span data-l="en">“Wan Wu Fu Su” · Suzhou, Wuxi &amp; Changzhou</span><span data-l="zh">万物赋苏 · 苏锡常暑期社会实践</span></h3><time datetime="2025-07">2025.07</time></div>
+    <p class="entry-role"><span data-l="en">Delegation leader</span><span data-l="zh">支队长</span></p>
+    <p class="entry-copy" data-l="en">Led a departmental summer field study across Suzhou, Wuxi and Changzhou in Jiangsu, contributing to field research, publicity, internal coordination and external liaison. The team received the department’s Second Prize for summer field studies, plus awards for popularity, liaison work and a Top Ten Article award.</p>
+    <p class="entry-copy" data-l="zh">担任支队长，在苏州、无锡、常州参与调研、宣传、内联与外联工作。支队获自动化系暑期社会实践二等奖、最佳人气奖、最佳联络奖及十佳推送。</p>
+    <div class="photo-pair photo-pair-natural">
+      <figure><button class="photo-button" type="button" aria-label="Enlarge Wuxi research institute group photograph" data-aria-zh="放大清华大学无锡应用技术研究院合影"><img src="assets/wanwufusu-wuxi.webp" width="1280" height="959" alt="Wan Wu Fu Su delegation at Tsinghua University’s applied technology research institute in Wuxi" data-alt-zh="万物赋苏支队在清华大学无锡应用技术研究院的合影" loading="lazy" decoding="async"><span class="photo-zoom" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zoom"/></svg></span></button><figcaption><span data-l="en">Tsinghua University · Wuxi research institute</span><span data-l="zh">清华大学无锡应用技术研究院</span></figcaption></figure>
+      <figure><button class="photo-button" type="button" aria-label="Enlarge Leju Robotics group photograph" data-aria-zh="放大苏州乐聚机器人合影"><img src="assets/wanwufusu-leju.webp" width="853" height="640" alt="Wan Wu Fu Su delegation at Leju Robotics in Suzhou" data-alt-zh="万物赋苏支队在苏州乐聚机器人的合影" loading="lazy" decoding="async"><span class="photo-zoom" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zoom"/></svg></span></button><figcaption><span data-l="en">Leju Robotics · Suzhou</span><span data-l="zh">苏州乐聚机器人</span></figcaption></figure>
+    </div>
+  </article>
 </section>
-<section class="section" id="awards" aria-labelledby="awards-title"><h2 class="section-heading" id="awards-title"><svg class="icon icon-award" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2.5 4.5 2.5-1-9"/></svg><span data-t="awardsTitle">Selected awards</span></h2><ul class="awards">
-<li><span data-t="award1">2nd Tsinghua Embodied Intelligence Challenge</span><span class="award-result" data-t="first">First Prize</span></li>
-<li><span data-t="award2">9th Tsinghua AI Challenge</span><span class="award-result" data-t="first">First Prize</span></li>
-<li><span data-t="award3">SparkEdu · Tsinghua</span><span class="award-result" data-t="outstanding">Outstanding Team</span></li>
-<li><span data-t="award4">8th Tsinghua AI Challenge · Automation track <span class="award-year">2025</span></span><span class="award-result" data-t="grand">Grand Prize · 1st</span></li>
-<li><span data-t="award5">4th Robotic Dog Development Competition <span class="award-year">2025</span></span><span class="award-result" data-t="runner">Second Prize · 4th</span></li>
-</ul></section>
 </main>
-<footer class="footer"><span>© 2026 Jin Li · 李锦</span><a href="#about"><span data-t="back">Back to top</span><svg class="icon icon-up" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></footer>
-</div><span class="sr-only" aria-live="polite" id="language-status"></span>
-<dialog class="photo-dialog" aria-label="Photograph preview"><button class="photo-close" type="button" aria-label="Close photograph"><svg class="icon icon-close" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button><figure><img alt=""><figcaption></figcaption></figure></dialog>
-<script>
-const fields=[...document.querySelectorAll('[data-t]')];
-const en=Object.fromEntries(fields.map(el=>[el.dataset.t,el.innerHTML]));
-const zh={
-siteNote:'个人主页',heroKicker:'清华大学 · 自动化系',heroRole:'本科生 · 世界模型与具身智能',researchCaption:'图 2 · 方法总览',nyuCaption:'纽约大学交流现场',
-identity:'本科生<br>自动化系<br><strong>清华大学</strong>',navAbout:'关于',navNews:'动态',navResearch:'研究',navProjects:'项目',navExperience:'经历',navEducation:'教育与校园',navAwards:'荣誉',aboutTitle:'关于我',
-bio1:"我是李锦，清华大学自动化系本科生，研究兴趣是世界模型与具身智能。目前参与的研究包括视频世界模型中的歧义指令理解与消解，以及哈密顿世界模型中的可辨识相空间。",
-bio2:"科研之外，我通过人工智能与机器人竞赛参与算法开发和机器人任务实现。2026 年夏天，我担任清华大学 MUSE 赴美实践支队实践组组长，在纽约与洛杉矶开展访谈调研，关注人工智能对内容创作、艺术教育与人机协作的影响。",
-bio3:'科研之外，我参与学生集体工作与社会实践，曾担任 MUSE 赴美实践支队实践组组长，围绕人工智能与内容创作开展调研。',
-interests:'研究兴趣',worldModels:'世界模型',embodied:'具身智能',newsTitle:'近期动态',news1:'<a href="#ambiguousworld">AmbiguousWorld</a> 获 <strong class="venue-highlight">NeurIPS 2026</strong> 主会 Poster 录用。',news2:"担任 <a href=\"#muse\">MUSE</a> 赴美支队实践组组长，在纽约、洛杉矶围绕 AI 与内容创作开展调研。",
-researchTitle:'论文与研究',accepted:'主会 · Poster · 已录用',coSecond:'共同第二作者（共二）',awSummary:"当人类指令省略关键细节时，视频世界模型如何理解意图并生成合理的后续过程？AmbiguousWorld 构建了基于 DROID 的歧义指令基准，并提出推理时的消歧框架：利用视觉语言模型拆分子目标，通过树搜索探索候选视频轨迹，再根据视觉反馈筛除偏离任务或不符合物理约束的分支。",manuscript:'研究稿件',second:'第二作者',ihwmSummary:'围绕哈密顿世界模型中的可辨识相空间开展研究。',
-projectsTitle:'项目经历',thueiTitle:'清华大学第二届具身智能挑战赛',thueiBody:"作为队员参与初赛任务开发，以及决赛中循迹、抓取与运输等机器人任务模块的代码实现。团队获得一等奖。",thuaiTitle:'清华大学第九届人工智能挑战赛',thuaiBody:"担任队长，参与核心算法的实现与迭代、策略优化，并协调团队协作。团队获得一等奖。",sparkTitle:'乐云具身 · 具身智能训练营',sparkBody:"参加阿里巴巴达摩院具身智能训练营清华大学站，参与从数据采集到模型微调、部署的实践。所在团队获评“优秀团队”。",
-experienceTitle:'实践经历',museTitle:'MUSE · 赴美实践',museRole:'实践组组长 · 纽约与洛杉矶',museBody:"在纽约与洛杉矶组织行程和交流活动，参与访谈及调研报告撰写。支队走访纽约大学、美国外交关系协会、美中关系全国委员会等机构，围绕 AI 与内容创作、艺术教育开展交流，探讨生成工具普及后，故事表达、审美判断与团队协作仍面临的挑战。相关观察整理为支队报告《提示词之外，缪斯何在？——AI时代创作门槛的中美观察》。",museCaption:'MUSE 赴美实践支队 · 2026 年 8 月',suzhouTitle:'万物赋苏 · 社会实践',suzhouRole:'支队长',suzhouBody:"担任支队长，前期联系实践地政府与企业，行程中组织队员调研、协调走访路线，结束后参与宣传推送策划。支队获自动化系暑期社会实践二等奖、最佳人气奖、最佳联络奖及十佳推送。",
-educationTitle:'教育与校园',university:'清华大学',educationTime:'2024—至今',degree:'自动化系 · 本科生',academicYear:'本学年',rank:'年级排名',
-service:"<strong>校园服务：</strong>在自动化系科协硬件部参与技术培训与赛事组织；作为校园议事厅代表，参与紫荆宿舍装修与搬迁相关议事。",volunteering:"<strong>志愿活动：</strong>参与机器狗大赛和具身智能挑战赛保障、新生暑期培训、“尺素传情”书信活动，以及上地八一社区青少年垃圾分类项目。",
-awardsTitle:'代表荣誉',award1:'清华大学第二届具身智能挑战赛',award2:'清华大学第九届人工智能挑战赛',award3:'乐云具身 · SparkEdu 清华大学站',first:'一等奖',outstanding:'优秀团队',award4:'清华大学第八届人工智能挑战赛 · 自动化系赛道 <span class="award-year">2025</span>',grand:'特等奖 · 第一名',award5:'第四届机器狗开发大赛 <span class="award-year">2025</span>',runner:'二等奖 · 第四名',back:'回到顶部'
-};
-function setLanguage(language){const dictionary=language==='zh'?zh:en;fields.forEach(el=>{el.innerHTML=dictionary[el.dataset.t]});document.documentElement.lang=language==='zh'?'zh-CN':'en';document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));document.querySelector('#language-status').textContent=language==='zh'?'已切换为中文':'Switched to English'}
-document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
-const navLinks=[...document.querySelectorAll('.profile-nav a')];
-const sections=[...document.querySelectorAll('main > .section')];
-function updateActiveSection(){
- const readingLine=(parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)||0)+8;
- const active=[...sections].reverse().find(section=>section.getBoundingClientRect().top<=readingLine)||sections[0];
- navLinks.forEach(link=>{
-  if(link.getAttribute('href')==='#'+active.id)link.setAttribute('aria-current','location');
-  else link.removeAttribute('aria-current');
- });
-}
-let navFrame=0;
-window.addEventListener('scroll',()=>{
- if(navFrame)return;
- navFrame=requestAnimationFrame(()=>{navFrame=0;updateActiveSection()});
-},{passive:true});
-window.addEventListener('resize',updateActiveSection);
-updateActiveSection();
 
-const paletteButtons=[...document.querySelectorAll('[data-theme-option]')];
-function setPalette(theme){
- if(!paletteButtons.some(b=>b.dataset.themeOption===theme))return;
- document.documentElement.dataset.theme=theme;
- paletteButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeOption===theme)));
- try{localStorage.setItem('jin-homepage-design-palette',theme)}catch{}
-}
-paletteButtons.forEach(b=>b.addEventListener('click',()=>setPalette(b.dataset.themeOption)));
-try{setPalette(localStorage.getItem('jin-homepage-design-palette')||'clay')}catch{setPalette('clay')}
+<footer class="footer">
+  <span>© 2026 Jin Li · 李锦 · <span data-l="en">Updated Sep 2026</span><span data-l="zh">更新于 2026 年 9 月</span></span>
+  <a href="#about"><span data-l="en">Back to top</span><span data-l="zh">回到顶部</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up"/></svg></a>
+</footer>
+</div>
 
-const photoDialog=document.querySelector('.photo-dialog');
-const previewImage=photoDialog.querySelector('img');
-const previewCaption=photoDialog.querySelector('figcaption');
-document.querySelectorAll('.photo-button').forEach(button=>button.addEventListener('click',()=>{
- const source=button.querySelector('img');
- previewImage.src=source.src;previewImage.alt=source.alt;
- previewCaption.textContent=button.closest('figure').querySelector('figcaption').textContent;
- photoDialog.showModal();
-}));
-photoDialog.querySelector('.photo-close').addEventListener('click',()=>photoDialog.close());
-photoDialog.addEventListener('click',event=>{if(event.target===photoDialog)photoDialog.close()});
-</script>
-</body></html>
+<span class="sr-only" aria-live="polite" id="language-status"></span>
+<dialog class="photo-dialog" aria-label="Image preview" data-aria-zh="图片预览">
+  <button class="photo-close" type="button" aria-label="Close" data-aria-zh="关闭"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"/></svg></button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</dialog>
+</body>
+</html>
