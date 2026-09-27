@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Jin Li, an undergraduate at Tsinghua University working on world models and embodied intelligence.">
+<title>Jin Li · 李锦</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23c2785b'/%3E%3Ctext x='20' y='28' text-anchor='middle' fill='white' font-family='Georgia' font-size='26'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* OFL fonts are hosted locally. */
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400 600;font-display:swap;src:url('assets/fonts/source-serif-4-latin.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('assets/fonts/dm-sans-latin.woff2') format('woff2')}
+:root{color-scheme:light;--bg:#faf9f5;--sidebar:#f0eee6;--ink:#30302e;--text:#3d3c38;--muted:#6f6e66;--accent:#a55035;--line:#dedbd2;--hover:#e8e5dc;--serif:'Source Serif 4',Georgia,'Songti SC',STSong,serif;--sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}
+html[data-theme='blue']{--bg:#f6f8fc;--sidebar:#e9eef6;--ink:#2c3c53;--text:#3d4858;--muted:#636e7c;--accent:#45628a;--line:#dce2ec;--hover:#dce5f0}
+html[data-theme='green']{--bg:#f7f9f5;--sidebar:#e8eee7;--ink:#293b32;--text:#3f4c44;--muted:#647268;--accent:#446850;--line:#d9e0d6;--hover:#dce5da}
+html[data-theme='rose']{--bg:#fcf8f7;--sidebar:#f3e9e7;--ink:#463133;--text:#574548;--muted:#7a6668;--accent:#91525c;--line:#e7d9d8;--hover:#ebdad8}
+html[data-theme='sand']{--bg:#fbf9f2;--sidebar:#f1ebdc;--ink:#463d2d;--text:#514937;--muted:#7a705b;--accent:#896528;--line:#e5dcc6;--hover:#e8dec7}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:36px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 var(--sans);font-optical-sizing:auto;font-kerning:normal;font-synthesis:none;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}::selection{background:var(--hover);color:var(--ink)}
+.skip{position:absolute;top:-80px;left:20px;background:var(--bg);padding:10px;z-index:20}.skip:focus{top:10px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+/* A narrow, quiet index leaves room for the person and their work. */
+.shell{width:100%;max-width:1136px;margin:0 auto;padding:88px 48px 0;display:grid;grid-template-columns:156px minmax(0,1fr);column-gap:64px;align-items:start}
+.profile{position:sticky;top:54px;min-width:0;font-family:var(--sans)}.site-name{display:inline-flex;gap:10px;align-items:baseline;font:400 27px/1.3 var(--serif);letter-spacing:-.025em;color:var(--ink)}.site-name span{font:13px/1.5 'Songti SC',STSong,serif;letter-spacing:.04em;color:var(--muted)}.site-note{font-size:11px;line-height:1.8;margin-top:7px;color:var(--muted)}
+.profile-nav{margin-top:42px;display:flex;flex-direction:column;gap:13px}.profile-nav a{position:relative;color:var(--muted);font-size:13px;line-height:1.7;padding:3px 0;transition:color .15s}.profile-nav a:hover,.profile-nav a[aria-current]{color:var(--ink)}.profile-nav a[aria-current]::before{content:'';position:absolute;left:-14px;top:12px;width:4px;height:4px;background:var(--accent);border-radius:50%}
+.language{display:flex;gap:8px;align-items:center;margin-top:34px;color:var(--line);font-size:12px}.language button{border:0;background:none;color:var(--muted);padding:5px 0;min-height:32px;font-size:12px}.language button[aria-pressed='true']{color:var(--ink);font-weight:500}
+main{min-width:0}.section{border-top:1px solid var(--line);padding:40px 0 46px}.section:first-child{padding-top:0;border:0}.section-heading{font:400 30px/1.3 var(--serif);letter-spacing:-.025em;color:var(--ink);margin-bottom:26px}
+.hero-kicker{font-size:12px;line-height:1.7;color:var(--muted)}.hero-name{font:400 58px/1.12 var(--serif);letter-spacing:-.04em;color:var(--ink);margin-top:14px}.hero-name span{font:400 23px/1.4 'Songti SC',STSong,serif;letter-spacing:.04em;color:var(--muted);display:inline-block;vertical-align:baseline;margin-left:12px}.hero-role{font-size:13px;line-height:1.8;color:var(--accent);margin-top:12px}
+.about-copy{font:18px/1.75 var(--serif);margin-top:26px;max-width:64ch}.about-copy p+p{margin-top:13px}.hero-email{display:inline-flex;align-items:center;gap:13px;font-size:12px;color:var(--muted);margin-top:21px}.hero-email:hover{color:var(--accent)}.hero-email span{font-size:15px;color:var(--accent)}
+.news-row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:15px;font-size:13px;line-height:1.8}.news-row+.news-row{margin-top:12px}.news-row time{padding-top:4px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.news-row a{color:var(--accent);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+/* Research imagery is compact and explicitly labelled by its source. */
+.paper+.paper{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}.paper-featured{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px}.paper-content{min-width:0}.paper-meta{font-size:11px;line-height:1.75;color:var(--muted);margin-bottom:9px;display:flex;flex-wrap:wrap;gap:3px 10px}.paper-meta .venue{color:var(--accent);font-weight:500}.paper h3{font:400 22px/1.38 var(--serif);letter-spacing:-.015em;color:var(--ink);text-wrap:pretty}.authors{margin-top:11px;font-size:12px;line-height:1.7;display:flex;gap:11px;flex-wrap:wrap}.authors strong{font-weight:500}.authors .role{color:var(--muted)}.paper-summary{font:16px/1.7 var(--serif);color:var(--muted);margin-top:9px}.research-image{padding-top:3px}.research-image img{width:100%;aspect-ratio:16/9;object-fit:contain}.research-image figcaption{font-size:10px;line-height:1.65}
+.project-row{display:grid;grid-template-columns:77px minmax(0,1fr);gap:20px}.project-row+.project-row{margin-top:25px}.project-key{font-size:12px;line-height:1.8;color:var(--muted);padding-top:3px}.project-row h3,.entry h3{font-size:15px;font-weight:500;line-height:1.65;color:var(--ink)}.project-row p{font:17px/1.7 var(--serif);color:var(--muted);margin-top:6px}
+.entry+.entry{margin-top:34px}.entry-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}.entry time{font-size:11px;line-height:1.8;white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}.entry-role{font-size:12px;line-height:1.8;color:var(--accent);margin-top:5px}.entry-copy{font:17px/1.75 var(--serif);margin-top:13px}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:23px}.photo-pair figure{min-width:0}.photo-button{border:0;display:block;width:100%;padding:0;background:transparent;cursor:zoom-in;border-radius:3px;overflow:hidden}.photo-button img{display:block;width:100%;height:auto;border-radius:3px;transition:opacity .18s}.photo-button:hover img{opacity:.9}.photo-pair img{aspect-ratio:1.5;object-fit:cover}.photo-pair figcaption,.research-image figcaption{font-family:var(--sans);color:var(--muted);margin-top:8px}.photo-pair figcaption{font-size:11px;line-height:1.6}.personal-gallery{grid-template-columns:1fr 1fr}.personal-gallery img{aspect-ratio:1.5}.personal-gallery figure:first-child img{object-position:50% 45%}
+.edu-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}.edu-head h3{font-size:16px;font-weight:500;line-height:1.8;color:var(--ink)}.edu-head time{font-size:11px;line-height:1.8;white-space:nowrap;color:var(--muted)}.degree{font-size:13px;line-height:1.8;color:var(--muted);margin-top:4px}.academic{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:13px;line-height:1.8;margin-top:17px}.academic strong{font-weight:500;color:var(--ink)}.academic>span:first-child{font-size:11px;color:var(--muted);align-self:center}.service{font:17px/1.75 var(--serif);margin-top:25px}.service strong{font-weight:500;color:var(--ink)}.service p+p{margin-top:12px}.personal-life{margin-top:35px}.personal-life h3{font:400 25px/1.4 var(--serif);letter-spacing:-.015em;color:var(--ink)}.personal-copy{font:17px/1.75 var(--serif);margin-top:10px;color:var(--muted)}
+.awards{list-style:none;padding:0;margin:0}.awards li{display:grid;grid-template-columns:minmax(0,1fr) 122px;gap:22px;padding:13px 0;font-size:14px;line-height:1.75}.awards li+li{border-top:1px solid var(--line)}.award-result{font-size:12px;line-height:1.9;color:var(--muted);text-align:right;padding-top:1px}.award-year{font-size:11px;color:var(--muted);margin-left:9px;white-space:nowrap}
+.footer{grid-column:2;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:22px 0 34px;font-size:11px;color:var(--muted)}.footer a:hover{color:var(--accent)}
+/* The five palettes remain available without occupying a full header. */
+.palette-picker{position:fixed;right:24px;top:17px;z-index:10;font-family:var(--sans)}.palette-picker summary{list-style:none;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:5px 11px;font-size:11px;line-height:1.7;color:var(--muted)}.palette-picker summary::-webkit-details-marker{display:none}.current-swatch{width:9px;height:9px;border-radius:50%;background:var(--accent)}.palette-options{position:absolute;right:0;top:40px;width:360px;max-width:calc(100vw - 32px);display:grid;grid-template-columns:repeat(5,1fr);gap:3px;padding:8px;background:var(--bg);border:1px solid var(--line);border-radius:9px;box-shadow:0 6px 24px rgb(0 0 0 / .05)}.palette-button{display:flex;align-items:center;justify-content:center;gap:5px;background:transparent;border:1px solid transparent;border-radius:5px;min-height:36px;padding:5px;color:var(--muted);font-size:11px;line-height:1.5;white-space:nowrap}.palette-button:hover{background:var(--sidebar)}.palette-button[aria-pressed='true']{background:var(--sidebar);border-color:var(--line);color:var(--ink)}.swatch{width:11px;height:11px;border-radius:50%;background:var(--swatch);flex:none}
+.photo-dialog{padding:24px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);max-width:min(1100px,calc(100vw - 36px));max-height:calc(100svh - 36px);overflow:auto}.photo-dialog::backdrop{background:rgb(25 25 23 / .66)}.photo-dialog img{display:block;max-width:100%;max-height:calc(100svh - 130px);width:auto;height:auto;margin:12px auto 0;border-radius:3px}.photo-dialog figcaption{font-size:12px;color:var(--muted);margin-top:13px;padding-right:20px}.photo-close{position:absolute;right:8px;top:5px;border:0;background:var(--bg);border-radius:50%;font:25px/1 var(--sans);width:32px;height:32px;color:var(--muted)}
+html[lang='zh-CN'] .about-copy,html[lang='zh-CN'] .news-item,html[lang='zh-CN'] .paper-summary,html[lang='zh-CN'] .project-row p,html[lang='zh-CN'] .entry-copy,html[lang='zh-CN'] .service,html[lang='zh-CN'] .personal-copy{font-family:'PingFang SC','Microsoft YaHei',var(--sans);font-size:15px;line-height:1.95}html[lang='zh-CN'] .about-copy{font-size:16px}html[lang='zh-CN'] .section-heading,html[lang='zh-CN'] .personal-life h3{font-family:'Songti SC',STSong,'Noto Serif CJK SC',var(--serif);letter-spacing:.025em}
+@media(max-width:1050px){.shell{padding:72px 32px 0;grid-template-columns:136px minmax(0,1fr);column-gap:40px}.site-name{font-size:25px}.site-name span{font-size:12px}.paper-featured{grid-template-columns:145px minmax(0,1fr);gap:20px}.paper h3{font-size:21px}.hero-name{font-size:54px}.section-heading{font-size:29px}.awards li{grid-template-columns:minmax(0,1fr) 103px}}
+@media(max-width:720px){html{scroll-padding-top:25px}.shell{display:block;padding:28px 24px 0}.profile{position:relative;top:0;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:28px}.site-name{font-size:25px}.site-note{display:none}.profile-nav{margin-top:18px;flex-direction:row;gap:8px 17px;flex-wrap:wrap;padding-right:0}.profile-nav a{font-size:12px;line-height:1.7;padding:2px 0}.profile-nav a[aria-current]::before{display:none}.profile-nav a[aria-current]{color:var(--accent)}.language{position:absolute;right:0;top:0;margin:0;gap:6px}.language button{font-size:11px}.palette-picker{top:auto;bottom:18px;right:18px}.palette-picker summary{min-height:36px;padding:7px 12px;background:var(--bg);box-shadow:0 2px 10px rgb(0 0 0 / .035)}.palette-options{top:auto;bottom:45px;width:340px}.hero-kicker{font-size:11px}.hero-name{font-size:48px;margin-top:12px}.hero-name span{font-size:21px;margin-left:9px}.hero-role{font-size:12px;margin-top:10px;max-width:33ch}.about-copy{font-size:18px;line-height:1.7;margin-top:21px}.hero-email{font-size:12px;margin-top:18px}.news-row{grid-template-columns:52px minmax(0,1fr);gap:12px}.section{padding:30px 0 35px}.section-heading{font-size:28px;margin-bottom:22px}.paper-featured{grid-template-columns:1fr;gap:15px}.research-image{width:min(225px,75%);padding:0}.research-image figcaption{font-size:10px}.paper h3{font-size:22px}.paper-summary{font-size:17px}.paper-meta{font-size:11px}.project-row{grid-template-columns:1fr;gap:3px}.project-row+.project-row{margin-top:24px}.project-row p,.entry-copy,.service,.personal-copy{font-size:17px}.entry-head,.edu-head{flex-wrap:wrap;gap:5px 14px}.entry h3{font-size:15px}.photo-pair{gap:10px;margin-top:20px}.photo-pair figcaption{font-size:10px;line-height:1.65}.personal-gallery{grid-template-columns:1fr 1fr}.personal-gallery img{aspect-ratio:1.4}.academic{gap:5px 18px}.academic>span:first-child{width:100%}.awards li{grid-template-columns:minmax(0,1fr) 88px;gap:14px;font-size:13px}.award-result{font-size:11px}.footer{padding:20px 0 76px;font-size:11px}.footer a{white-space:nowrap}.photo-dialog{padding:18px 14px}.photo-dialog figcaption{font-size:11px}html[lang='zh-CN'] .section-heading{font-size:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.profile-nav a,.photo-button img{transition:none}}
+
+/* Preserve the complete paper method figure at a readable width. */
+.paper-featured.method-paper{display:block}
+.method-paper .research-image{width:100%;margin-top:21px;padding:0}
+.method-image .photo-button{padding:9px;background:#fff;border:1px solid var(--line);border-radius:5px}
+.method-image img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:0}
+.method-image figcaption{font-size:11px;margin-top:9px}
+@media(max-width:720px){.method-image .photo-button{padding:5px}.method-paper .research-image{margin-top:18px}.method-image figcaption{font-size:10px}}
+
+/* A small, shared line-icon vocabulary follows the selected palette. */
+.icon{display:inline-block;width:16px;height:16px;flex:0 0 auto;vertical-align:middle;pointer-events:none}
+.profile-nav a{display:flex;align-items:center;gap:10px}
+.profile-nav a>.icon{width:15px;height:15px;color:var(--muted);transition:color .15s}
+.profile-nav a:hover>.icon,.profile-nav a[aria-current]>.icon{color:var(--accent)}
+.profile-nav a[aria-current]::before{display:none}
+.hero-email{gap:8px}.hero-email>.icon{color:var(--accent)}
+.paper-meta{align-items:center}.paper-meta .venue{display:inline-flex;align-items:center;gap:5px}
+.paper-meta .icon{width:13px;height:13px}.manuscript-meta{gap:6px}
+.photo-button{position:relative}.photo-zoom{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--muted);transition:color .15s,border-color .15s}
+.photo-zoom .icon{width:14px;height:14px}.photo-button:hover .photo-zoom,.photo-button:focus-visible .photo-zoom{color:var(--accent);border-color:var(--accent)}
+.method-image .photo-zoom{position:static;margin:5px 0 0 auto;width:23px;height:23px;background:transparent;border-color:transparent;border-radius:3px}
+.photo-close{display:flex;align-items:center;justify-content:center}.photo-close .icon{width:18px;height:18px}.photo-close:hover{color:var(--accent)}
+.footer a{display:inline-flex;align-items:center;gap:6px}.footer .icon{width:13px;height:13px}
+@media(max-width:720px){.profile-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 12px}.profile-nav a{gap:7px;white-space:nowrap}.profile-nav a>.icon{width:14px;height:14px}.photo-zoom{right:7px;bottom:7px;width:25px;height:25px}.method-image .photo-zoom{margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.profile-nav a>.icon,.photo-zoom{transition:none}}
+
+/* Small icons mark the main reading sections and supporting information. */
+.section-heading{display:flex;align-items:flex-start;gap:10px}
+.section-heading>.icon{width:18px;height:18px;margin-top:.3em;color:var(--accent)}
+.section-heading>span{min-width:0}
+.personal-life h3,.hero-kicker{display:flex;align-items:center;gap:8px}
+.hero-kicker>.icon{width:13px;height:13px;color:var(--accent)}
+.personal-life h3>.icon{width:17px;height:17px;color:var(--accent)}
+@media(max-width:720px){.section-heading{gap:9px}.section-heading>.icon{width:17px;height:17px}.hero-kicker{align-items:flex-start;gap:7px}.hero-kicker>.icon{margin-top:3px}}
+
+/* Flat, theme-colored illustrations accompany each news item. */
+.news-item{display:flex;align-items:flex-start;gap:7px;font:17px/1.75 var(--serif)}
+.news-item>.news-symbol{display:block;width:16px;height:16px;flex:0 0 16px;margin-top:calc((1lh - 16px)/2);color:var(--accent);pointer-events:none}
+.news-item>span{min-width:0}
+
+/* Looser 3:4 framing of the retouched photo; equivalent source crop
+   (1410, 720, 1710, 2280) on the original 4032 x 3024 photograph. */
+#about{display:flow-root}
+.hero-portrait{float:right;position:relative;width:clamp(160px,30%,208px);aspect-ratio:3/4;margin:0 0 22px 28px;overflow:hidden;border-radius:6px;background:var(--sidebar)}
+.hero-portrait img{position:absolute;display:block;width:235.789474%;max-width:none;height:auto;left:-82.456140%;top:-31.578947%}
+@media(min-width:721px) and (max-width:900px){.hero-portrait{width:160px;margin-left:24px}}
+@media(max-width:540px){.hero-portrait{float:none;width:150px;margin:0 0 24px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+<details class="palette-picker"><summary aria-label="选择配色"><span class="current-swatch" aria-hidden="true"></span>配色</summary>
+<div class="palette-options" role="group" aria-label="选择配色">
+<button class="palette-button" type="button" data-theme-option="clay" aria-pressed="true" aria-label="暖纸陶土配色"><span class="swatch" style="--swatch:#c2785b" aria-hidden="true"></span>暖纸</button>
+<button class="palette-button" type="button" data-theme-option="blue" aria-pressed="false" aria-label="雾蓝配色"><span class="swatch" style="--swatch:#7189ab" aria-hidden="true"></span>雾蓝</button>
+<button class="palette-button" type="button" data-theme-option="green" aria-pressed="false" aria-label="松绿配色"><span class="swatch" style="--swatch:#748e74" aria-hidden="true"></span>松绿</button>
+<button class="palette-button" type="button" data-theme-option="rose" aria-pressed="false" aria-label="玫瑰灰配色"><span class="swatch" style="--swatch:#b17e83" aria-hidden="true"></span>玫瑰</button>
+<button class="palette-button" type="button" data-theme-option="sand" aria-pressed="false" aria-label="沙金配色"><span class="swatch" style="--swatch:#b59a60" aria-hidden="true"></span>沙金</button>
+</div></details>
+<div class="shell">
+<aside class="profile" aria-label="Jin Li profile">
+  <div class="profile-core"><a class="site-name" href="#about">Jin Li<span lang="zh-CN">李锦</span></a><p class="site-note" data-t="siteNote">Personal website</p></div>
+  <nav class="profile-nav" aria-label="Page navigation"><a href="#about" aria-current="location"><svg class="icon icon-person" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3"/><path d="M5 20v-2a7 7 0 0 1 14 0v2"/></svg><span data-t="navAbout">About</span></a><a href="#news"><svg class="icon icon-clock" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-t="navNews">News</span></a><a href="#research"><svg class="icon icon-book" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v15M12 5C9 3 5 3 2.5 4.5v14C5 17 9 17 12 20c3-3 7-3 9.5-1.5v-14C19 3 15 3 12 5Z"/></svg><span data-t="navResearch">Research</span></a><a href="#projects"><svg class="icon icon-code" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m9 9-3 3 3 3m6-6 3 3-3 3"/></svg><span data-t="navProjects">Projects</span></a><a href="#experience"><svg class="icon icon-compass" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></svg><span data-t="navExperience">Experience</span></a><a href="#education"><svg class="icon icon-graduation" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6m4-2v8"/></svg><span data-t="navEducation">Education</span></a><a href="#awards"><svg class="icon icon-award" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2.5 4.5 2.5-1-9"/></svg><span data-t="navAwards">Awards</span></a></nav>
+  <div class="language" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false">中文</button></div>
+</aside>
+<main id="main">
+<section class="section" id="about" aria-labelledby="about-title">
+<figure class="hero-portrait"><img src="assets/jin-li-portrait-retouched.jpg" width="1448" height="1086" alt="Jin Li in front of a painting" fetchpriority="high" decoding="async"></figure>
+<p class="hero-kicker"><svg class="icon icon-university" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 8 9-5 9 5H3Zm1 13h16M6 11v7m6-7v7m6-7v7M3 18h18"/></svg><span data-t="heroKicker">Tsinghua University · Department of Automation</span></p>
+<h1 class="hero-name" id="about-title">Jin Li <span lang="zh-CN">李锦</span></h1>
+<p class="hero-role" data-t="heroRole">Undergraduate · World models & embodied intelligence</p>
+<div class="about-copy"><p data-t="bio1">I study world models and embodied intelligence at Tsinghua University. My research explores ambiguous instructions in video world models and identifiable phase spaces in Hamiltonian world models.</p><p data-t="bio2">Beyond research, I build robots, take part in AI competitions, and explore the connections between technology and creative work through field studies.</p></div>
+<a class="hero-email" href="mailto:lj24@mails.tsinghua.edu.cn"><svg class="icon icon-mail" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>lj24@mails.tsinghua.edu.cn</a>
+</section>
+<section class="section news-section" id="news" aria-labelledby="news-title">
+<h2 class="section-heading" id="news-title"><svg class="icon icon-clock" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-t="newsTitle">News</span></h2>
+<div class="news-row"><time datetime="2026-09">2026.09</time><p class="news-item"><svg class="news-symbol" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 10-5 11 11-5Z" fill="currentColor" fill-opacity=".22"/><path d="m8 10-5 11 11-5Zm-2.1 4.6 3.5 3.5M13 9c-2-4 5-2 3-6M15 12c3-4 3 2 6-2"/><path d="m10 3 .8-1 .8 1-.8 1Z" fill="currentColor" stroke="none"/><circle cx="20" cy="5" r="1.2" fill="currentColor" fill-opacity=".65" stroke="none"/><path d="m18 17 1 1"/></svg><span data-t="news1"><a href="#ambiguousworld">AmbiguousWorld</a> accepted to NeurIPS 2026 Main Track as a Poster.</span></p></div><div class="news-row"><time datetime="2026-08">2026.08</time><p class="news-item"><svg class="news-symbol" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".12"/><path d="m6 5 4 1 1 3-3 2-2-1-2 1M13 4l-1 3 3 2 4-1M10 13l4-1 3 3-2 2-1 4-3-2v-3l-2-1Z" fill="currentColor" fill-opacity=".48" stroke="none"/><circle cx="12" cy="12" r="9"/></svg><span data-t="news2">Fieldwork with <a href="#muse">MUSE</a> in New York and Los Angeles.</span></p></div>
+</section>
+<section class="section" id="research" aria-labelledby="research-title">
+<h2 class="section-heading" id="research-title"><svg class="icon icon-book" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v15M12 5C9 3 5 3 2.5 4.5v14C5 17 9 17 12 20c3-3 7-3 9.5-1.5v-14C19 3 15 3 12 5Z"/></svg><span data-t="researchTitle">Publications & research</span></h2>
+<article class="paper paper-featured method-paper" id="ambiguousworld">
+<div class="paper-content"><p class="paper-meta"><span class="venue"><svg class="icon icon-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg>NeurIPS 2026</span><span data-t="accepted">Main Track · Poster · Accepted</span></p><h3>AmbiguousWorld: Benchmarking and Resolving Ambiguous Instructions in Video World Models</h3><div class="authors"><strong>Jin Li</strong><span class="role" data-t="coSecond">Co-second author</span></div><p class="paper-summary" data-t="awSummary">A study of ambiguous instructions in video world models, spanning benchmarking and ambiguity resolution.</p></div>
+<figure class="research-image method-image"><button class="photo-button" type="button" aria-label="View AmbiguousWorld method overview"><img src="assets/ambiguousworld-method.png" width="1437" height="806" alt="AmbiguousWorld method overview: dynamic decomposition, branch generation, tree search, video generation and VLM critic" loading="lazy"><span class="photo-zoom" aria-hidden="true"><svg class="icon icon-zoom" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span></button><figcaption data-t="researchCaption">Figure 2 · Method overview</figcaption></figure>
+</article>
+<article class="paper"><p class="paper-meta manuscript-meta"><svg class="icon icon-file" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Zm0 0v6h6M8 13h8m-8 4h5"/></svg><span data-t="manuscript">Research manuscript</span></p><h3>I-HWM: Identifiable Phase Space for Hamiltonian World Models</h3><div class="authors"><strong>Jin Li</strong><span class="role" data-t="second">Second author</span></div><p class="paper-summary" data-t="ihwmSummary">Research on identifiable phase space in Hamiltonian world models.</p></article>
+</section>
+<section class="section" id="projects" aria-labelledby="projects-title"><h2 class="section-heading" id="projects-title"><svg class="icon icon-code" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m9 9-3 3 3 3m6-6 3 3-3 3"/></svg><span data-t="projectsTitle">Selected projects</span></h2>
+<article class="project-row"><div class="project-key">THUEI-2</div><div><h3 data-t="thueiTitle">Embodied Intelligence Challenge</h3><p data-t="thueiBody">Team member. Contributed to competition tasks and robot modules for line-following, grasping and transport.</p></div></article>
+<article class="project-row"><div class="project-key">THUAI-9</div><div><h3 data-t="thuaiTitle">Tsinghua AI Challenge</h3><p data-t="thuaiBody">Team captain. Worked on core algorithms, iterative strategy improvements and team coordination.</p></div></article>
+<article class="project-row"><div class="project-key">SparkEdu</div><div><h3 data-t="sparkTitle">Embodied AI training camp</h3><p data-t="sparkBody">Team member at the Tsinghua program. Worked on data collection, model fine-tuning and deployment.</p></div></article>
+</section>
+<section class="section" id="experience" aria-labelledby="experience-title"><h2 class="section-heading" id="experience-title"><svg class="icon icon-compass" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></svg><span data-t="experienceTitle">Experience</span></h2>
+<article class="entry" id="muse"><div class="entry-head"><h3 data-t="museTitle">MUSE · United States field study</h3><time datetime="2026-08">2026.08</time></div><p class="entry-role" data-t="museRole">Fieldwork group leader · New York & Los Angeles</p><p class="entry-copy" data-t="museBody">Helped organize visits and activities, conduct interviews and write the field report on AI and creative work. The delegation met with universities, think tanks and industry, including NYU, CFR and NCUSCR.</p><div class="photo-pair muse-gallery">
+<figure><button class="photo-button" type="button" aria-label="View MUSE delegation photograph"><img src="assets/muse-delegation.jpg" alt="MUSE delegation group photograph with the 2026 United States field study flag" width="1269" height="847" loading="lazy"><span class="photo-zoom" aria-hidden="true"><svg class="icon icon-zoom" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span></button><figcaption data-t="museCaption">MUSE delegation · August 2026</figcaption></figure>
+<figure><button class="photo-button" type="button" aria-label="View NYU exchange photograph"><img src="assets/muse-nyu.jpg" alt="Panel discussion during the MUSE delegation's exchange at New York University" width="1270" height="846" loading="lazy"><span class="photo-zoom" aria-hidden="true"><svg class="icon icon-zoom" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span></button><figcaption data-t="nyuCaption">An exchange at New York University</figcaption></figure>
+</div></article>
+<article class="entry"><div class="entry-head"><h3 data-t="suzhouTitle">Wan Wu Fu Su · Social field study</h3><time datetime="2025-07">2025.07</time></div><p class="entry-role" data-t="suzhouRole">Delegation leader</p><p class="entry-copy" data-t="suzhouBody">Contributed to field research, communications, publicity and team coordination. The delegation received the Department of Automation's Second Prize for summer social practice.</p></article>
+</section>
+<section class="section" id="education" aria-labelledby="education-title"><h2 class="section-heading" id="education-title"><svg class="icon icon-graduation" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6m4-2v8"/></svg><span data-t="educationTitle">Education & campus</span></h2><div class="edu-head"><h3 data-t="university">Tsinghua University</h3><time data-t="educationTime">2024–present</time></div><p class="degree" data-t="degree">Department of Automation · Undergraduate</p><div class="academic"><span data-t="academicYear">This academic year</span><span>GPA <strong>4.00/4.00</strong></span><span><span data-t="rank">Rank</span> <strong>1/170</strong></span></div><div class="service"><p data-t="service"><strong>Campus service.</strong> Experience with the hardware division of the department's science and technology association and student representation in campus discussions.</p><p data-t="volunteering"><strong>Volunteering.</strong> Technology-event support, new-student training, letter-writing programs and community activities.</p></div>
+</section>
+<section class="section" id="awards" aria-labelledby="awards-title"><h2 class="section-heading" id="awards-title"><svg class="icon icon-award" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2.5 4.5 2.5-1-9"/></svg><span data-t="awardsTitle">Selected awards</span></h2><ul class="awards">
+<li><span data-t="award1">2nd Tsinghua Embodied Intelligence Challenge</span><span class="award-result" data-t="first">First Prize</span></li>
+<li><span data-t="award2">9th Tsinghua AI Challenge</span><span class="award-result" data-t="first">First Prize</span></li>
+<li><span data-t="award3">SparkEdu · Tsinghua</span><span class="award-result" data-t="outstanding">Outstanding Team</span></li>
+<li><span data-t="award4">8th Tsinghua AI Challenge · Automation track <span class="award-year">2025</span></span><span class="award-result" data-t="grand">Grand Prize · 1st</span></li>
+<li><span data-t="award5">4th Robotic Dog Development Competition <span class="award-year">2025</span></span><span class="award-result" data-t="runner">Second Prize · 4th</span></li>
+</ul></section>
+</main>
+<footer class="footer"><span>© 2026 Jin Li · 李锦</span><a href="#about"><span data-t="back">Back to top</span><svg class="icon icon-up" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></footer>
+</div><span class="sr-only" aria-live="polite" id="language-status"></span>
+<dialog class="photo-dialog" aria-label="Photograph preview"><button class="photo-close" type="button" aria-label="Close photograph"><svg class="icon icon-close" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button><figure><img alt=""><figcaption></figcaption></figure></dialog>
+<script>
+const fields=[...document.querySelectorAll('[data-t]')];
+const en=Object.fromEntries(fields.map(el=>[el.dataset.t,el.innerHTML]));
+const zh={
+siteNote:'个人主页',heroKicker:'清华大学 · 自动化系',heroRole:'本科生 · 世界模型与具身智能',researchCaption:'图 2 · 方法总览',nyuCaption:'纽约大学交流现场',
+identity:'本科生<br>自动化系<br><strong>清华大学</strong>',navAbout:'关于',navNews:'动态',navResearch:'研究',navProjects:'项目',navExperience:'经历',navEducation:'教育与校园',navAwards:'荣誉',aboutTitle:'关于我',
+bio1:'我是清华大学自动化系本科生，关注世界模型与具身智能。研究涉及视频世界模型中的歧义指令，以及哈密顿世界模型中的可辨识相空间。',
+bio2:'科研之外，我参与机器人与人工智能竞赛，也通过社会实践，探索技术与创作之间的联系。',
+bio3:'科研之外，我参与学生集体工作与社会实践，曾担任 MUSE 赴美实践支队实践组组长，围绕人工智能与内容创作开展调研。',
+interests:'研究兴趣',worldModels:'世界模型',embodied:'具身智能',newsTitle:'近期动态',news1:'<a href="#ambiguousworld">AmbiguousWorld</a> 获 NeurIPS 2026 主会 Poster 录用。',news2:'随 <a href="#muse">MUSE</a> 支队在纽约、洛杉矶开展实践调研。',
+researchTitle:'论文与研究',accepted:'主会 · Poster · 已录用',coSecond:'共同第二作者（共二）',awSummary:'围绕视频世界模型中的歧义指令开展研究，涉及基准构建与歧义消解。',manuscript:'研究稿件',second:'第二作者',ihwmSummary:'围绕哈密顿世界模型中的可辨识相空间开展研究。',
+projectsTitle:'项目经历',thueiTitle:'清华大学第二届具身智能挑战赛',thueiBody:'队员。参与竞赛任务开发，以及循迹、抓取和运输等机器人模块的代码实现。',thuaiTitle:'清华大学第九届人工智能挑战赛',thuaiBody:'队长。参与核心算法实现与迭代、策略优化，并协调队伍协作。',sparkTitle:'乐云具身 · 具身智能训练营',sparkBody:'清华大学站团队成员，参与数据采集、模型微调与部署。',
+experienceTitle:'实践经历',museTitle:'MUSE · 赴美实践',museRole:'实践组组长 · 纽约与洛杉矶',museBody:'参与行程与活动组织、访谈调研及报告撰写，围绕人工智能如何影响内容创作与文化产业开展研究。支队走访高校、智库与企业，包括纽约大学、美国外交关系协会、美中关系全国委员会等。',museCaption:'MUSE 赴美实践支队 · 2026 年 8 月',suzhouTitle:'万物赋苏 · 社会实践',suzhouRole:'支队长',suzhouBody:'参与调研、宣传、内联与外联，协调支队工作。支队获自动化系暑期社会实践二等奖。',
+educationTitle:'教育与校园',university:'清华大学',educationTime:'2024—至今',degree:'自动化系 · 本科生',academicYear:'本学年',rank:'年级排名',
+service:'<strong>校园服务：</strong>具有自动化系科协硬件部与校园议事厅代表经历，参与科技活动和校园公共事务。',volunteering:'<strong>志愿活动：</strong>参与科技赛事保障、新生培训、书信公益及社区服务。',
+awardsTitle:'代表荣誉',award1:'清华大学第二届具身智能挑战赛',award2:'清华大学第九届人工智能挑战赛',award3:'乐云具身 · SparkEdu 清华大学站',first:'一等奖',outstanding:'优秀团队',award4:'清华大学第八届人工智能挑战赛 · 自动化系赛道 <span class="award-year">2025</span>',grand:'特等奖 · 第一名',award5:'第四届机器狗开发大赛 <span class="award-year">2025</span>',runner:'二等奖 · 第四名',back:'回到顶部'
+};
+function setLanguage(language){const dictionary=language==='zh'?zh:en;fields.forEach(el=>{el.innerHTML=dictionary[el.dataset.t]});document.documentElement.lang=language==='zh'?'zh-CN':'en';document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));document.querySelector('#language-status').textContent=language==='zh'?'已切换为中文':'Switched to English'}
+document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
+const navLinks=[...document.querySelectorAll('.profile-nav a')];
+const sections=[...document.querySelectorAll('main > .section')];
+function updateActiveSection(){
+ const readingLine=(parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)||0)+8;
+ const active=[...sections].reverse().find(section=>section.getBoundingClientRect().top<=readingLine)||sections[0];
+ navLinks.forEach(link=>{
+  if(link.getAttribute('href')==='#'+active.id)link.setAttribute('aria-current','location');
+  else link.removeAttribute('aria-current');
+ });
+}
+let navFrame=0;
+window.addEventListener('scroll',()=>{
+ if(navFrame)return;
+ navFrame=requestAnimationFrame(()=>{navFrame=0;updateActiveSection()});
+},{passive:true});
+window.addEventListener('resize',updateActiveSection);
+updateActiveSection();
+
+const paletteButtons=[...document.querySelectorAll('[data-theme-option]')];
+function setPalette(theme){
+ if(!paletteButtons.some(b=>b.dataset.themeOption===theme))return;
+ document.documentElement.dataset.theme=theme;
+ paletteButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeOption===theme)));
+ try{localStorage.setItem('jin-homepage-design-palette',theme)}catch{}
+}
+paletteButtons.forEach(b=>b.addEventListener('click',()=>setPalette(b.dataset.themeOption)));
+try{setPalette(localStorage.getItem('jin-homepage-design-palette')||'clay')}catch{setPalette('clay')}
+
+const photoDialog=document.querySelector('.photo-dialog');
+const previewImage=photoDialog.querySelector('img');
+const previewCaption=photoDialog.querySelector('figcaption');
+document.querySelectorAll('.photo-button').forEach(button=>button.addEventListener('click',()=>{
+ const source=button.querySelector('img');
+ previewImage.src=source.src;previewImage.alt=source.alt;
+ previewCaption.textContent=button.closest('figure').querySelector('figcaption').textContent;
+ photoDialog.showModal();
+}));
+photoDialog.querySelector('.photo-close').addEventListener('click',()=>photoDialog.close());
+photoDialog.addEventListener('click',event=>{if(event.target===photoDialog)photoDialog.close()});
+</script>
+</body></html>
